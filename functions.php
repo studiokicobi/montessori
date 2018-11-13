@@ -3,24 +3,24 @@
  * Basic Genesis functions, followed by Montessori site customisation.
  *
  */
- 
+
 
 /**
  * Uncomment to force clear CSS Cache while developing theme:
  *
  */
- 
-add_filter( 'stylesheet_uri', 'child_stylesheet_uri' );
-function child_stylesheet_uri( $stylesheet_uri ) {
-	return add_query_arg( 'v', filemtime( get_stylesheet_directory() . '/style.css' ), $stylesheet_uri );
-}
+
+//add_filter( 'stylesheet_uri', 'child_stylesheet_uri' );
+//function child_stylesheet_uri( $stylesheet_uri ) {
+//	return add_query_arg( 'v', filemtime( get_stylesheet_directory() . '/style.css' ), $stylesheet_uri );
+//}
 
 
 /**
  * Genesis defaults:
  *
  */
- 
+
 // Start the engine.
 require_once get_template_directory() . '/lib/init.php';
 
@@ -205,14 +205,14 @@ function genesis_sample_remove_metaboxes( $_genesis_admin_settings ) {
 
 }
 
-/** 
+/**
  * Remove more metaboxes
  *
  */
 
 // Remove Genesis in-post SEO Settings
 remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
-	
+
 // Remove Genesis Layout Settings
 remove_theme_support( 'genesis-inpost-layouts' );
 
@@ -222,7 +222,7 @@ remove_theme_support( 'genesis-seo-settings-menu' );
 // Remove Genesis Scripts Meta box on pages
 add_action( 'admin_menu' , 'remove_genesis_page_scripts_box' );
 	function remove_genesis_page_scripts_box() {
-	remove_meta_box( 'genesis_inpost_scripts_box', 'page', 'normal' ); 
+	remove_meta_box( 'genesis_inpost_scripts_box', 'page', 'normal' );
 }
 
 add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_customizer_settings' );
@@ -321,7 +321,7 @@ function frontend_member_form_func( $atts ) {
 
 	$a = shortcode_atts( array( 'field_group' => '' ), $atts );
 	$uid = get_current_user_id();
-	
+
 	if ( ! empty ( $a['field_group'] ) && ! empty ( $uid ) ) {
 
 		$options = array(
@@ -398,7 +398,7 @@ function my_acf_save_post( $post_id ) {
 /**
  * Create child pages navigation in sidebar
  *
- * Shortcode is placed in sidebar widget 
+ * Shortcode is placed in sidebar widget
  *
  */
 
@@ -507,16 +507,16 @@ new auto_child_page_menu();
  * Add a custom user role for the Staff
  *
  */
- 
+
 $result = add_role( 'personal', __( 'Personal' ),
 	array(
-		'read' => true, 				
-		'edit_posts' => false, 			
-		'edit_pages' => false, 			
-		'edit_others_posts' => false,	
-		'create_posts' => false, 		
-		'manage_categories' => false, 	
-		'publish_posts' => false, 	
+		'read' => true,
+		'edit_posts' => false,
+		'edit_pages' => false,
+		'edit_others_posts' => false,
+		'create_posts' => false,
+		'manage_categories' => false,
+		'publish_posts' => false,
 	)
 );
 
