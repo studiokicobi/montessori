@@ -1,0 +1,454 @@
+/* ==========================================================================
+   Individual Pages
+   ========================================================================== */
+
+
+/* Home
+   =================================== */
+
+#hero-message-wrapper {
+	width: 100vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction:column;
+	background-color: #06AEFA;
+}
+
+body.home .content p { max-width: 550px; }
+
+#hero-1 {
+	box-sizing: border-box;
+	color: #fff;
+	@include font-size(30px);
+	font-family: $base-font-bold;
+	line-height: 1.2;
+	text-align: center;
+	max-width: 680px;
+	margin: 50px auto 220px auto;
+
+  p {
+    max-width: 100%;
+  }
+}
+
+#hero-ill {
+	background-image: url("images/barngrupp@2x.png");
+	background-size: 860px;
+	background-repeat: no-repeat;
+	height: 263px;
+	width: 860px;
+	margin: -155px auto 0 auto;
+}
+
+#hero-message-cont {
+	position: relative;
+	background: #054975;
+	background-image: url("images/land_bg@2x.png");
+	background-size: 1282px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius:100% 100% 0 0 / 20%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	clear: both;
+	margin-top: -50px;
+}
+
+#hero-2 {
+	color: #DFF6FF;
+	@include font-size(18px);
+	font-family: $base-font-medium;
+	line-height: 1.3;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 15px;
+	max-width: 610px;
+
+  p {
+    max-width: 100%;
+  }
+}
+
+#hero-3 {
+	color: #86D9FF;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-family: $base-font-medium-italic;
+	padding-bottom: 15px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Home: CTA button
+   =================================== */
+
+.cta-wrapper { text-align: center; }
+
+a.cta {
+	color: $blue;
+	background: $white;
+	padding: 15px 40px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50px;
+	margin: 10px auto 80px auto;
+  @include sm-caps;
+	@include font-size(16px);
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+}
+
+/* Home: Wave decoration
+   =================================== */
+
+/* .wave::before, .wave::after { border-bottom: 5px solid #fff; } */
+
+.wave {
+  background: transparent;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background-size: 20px 40px;
+    background-repeat: repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 15px;
+    background-repeat: repeat;
+    background-size: 40px 40px;
+  }
+}
+
+.wave-shadow {
+	width: 100vw;
+	height: 30px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wave-0::before { background-image: radial-gradient(circle at 10px -15px, rgba(180, 230, 250, 0) 20px, rgba(180, 230, 250, 1) 21px); }
+.wave-0::after{ background-image: radial-gradient(circle at 10px 26px, rgba(180, 230, 250, 1) 20px, rgba(180, 230, 250, 0) 21px); }
+.wave-shadow-0 { background: rgba(180, 230, 250, 1);  }
+
+.wave-1::before { background-image: radial-gradient(circle at 10px -15px, rgba(11, 137, 185, 0) 20px, rgba(11, 137, 185, 1) 21px); }
+.wave-1::after 	{ background-image: radial-gradient(circle at 10px 26px, rgba(11, 137, 185, 1) 20px, rgba(11, 137, 185, 0) 21px); }
+.wave-shadow-1 { background-color: rgba(11, 137, 185, 1); }
+
+.wave-2::before { background-image: radial-gradient(circle at 10px -15px, rgba(60, 178, 220, 0) 20px, rgba(60, 178, 220, 1) 21px); }
+.wave-2::after 	{ background-image: radial-gradient(circle at 10px 26px, rgba(60, 178, 220, 1) 20px, rgba(60, 178, 220, 0) 21px); }
+.wave-shadow-2 { background: rgba(60, 178, 220, 1); }
+
+.wave-footer::before { background-image: radial-gradient(circle at 10px -15px, rgba(5, 73, 117, 0) 20px, rgba(5, 73, 117, 1) 21px); }
+.wave-footer::after { background-image: radial-gradient(circle at 10px 26px, rgba(5, 73, 117, 1) 20px, rgba(5, 73, 117, 0) 21px); }
+.wave-shadow-footer { background: rgba(5, 73, 117, 1); }
+
+/* Home: Matsedel
+   =================================== */
+
+.pre-matsedel {
+	display: none;
+	margin-left: -50px;
+	width: 100vw;
+}
+
+.matsedel {
+  clear: both;
+  margin: 0 auto;
+  background: rgba(180, 230, 250, 1);
+  background-image: url("images/matsedel_illustration@2x.png");
+  background-position: center 20px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  padding: 30px 0 60px 0;
+  h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-size: 3.0rem;
+    padding: 150px 0 30px 0;
+    color: #111;
+  }
+  h4 {
+    font-family: $sans;
+    @include font-size(14px);
+    letter-spacing: 1px;
+    font-weight: $font-weight--bold;
+    text-align: center;
+    margin: 0 -20px 10px -20px;
+    padding: 15px 0;
+    background: $white;
+    border-radius: 5px 5px 0 0;
+  }
+  ul {
+    list-style-type: none;
+    overflow: auto;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-left: -15px;
+    li {
+      @include font-size(16px);
+      text-align: center;
+      border-radius: 3px;
+      list-style-type: none;
+      width: 15vw;
+      padding: 0 20px 20px 20px !important;
+      margin: 0 10px !important;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      &:last-child {}
+      strong {
+        @include sm-caps;
+        border-bottom: 2px solid $white;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include font-size(11px);
+        color: #555;
+      }
+      p em {
+        @include font-size(12px);
+      }
+    }
+  }
+}
+
+/* Kontakt page
+   =================================== */
+
+.wpcf7-submit {
+  @include sm-caps;
+  border-radius: 2px;
+  padding: 15px 25px !important;
+  margin-top: 12px;
+  @include font-size(12px);
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 40vh;
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin-bottom: 3rem;
+  iframe{
+  	left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.form-rubrik {
+	border-top: 2px solid #eee;
+	margin-top: 3rem;
+	padding-top: 3rem;
+}
+
+/* Intranät > Member Profile page
+   =================================== */
+
+label {
+  @include sm-caps;
+  @include font-size(12px);
+	color: #666;
+}
+
+select {
+  margin: 50px;
+  width: 250px;
+  padding: 5px 45px 5px 10px !important;
+  height: 50px !important;
+  border-radius: 0;
+  border: $border-width $border-style $light-grey;
+  appearance: none;
+  color: $black;
+  background: url("images/noun_down_1920917.png") 98% / 5% no-repeat $white;
+}
+
+select::-ms-expand { display: none; /* remove default arrow in IE 10 and 11 */ }
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+  select {
+    background:none\9;
+    padding: 5px\9;
+  }
+}
+
+.acf-input select option { padding-left: 10px; }
+
+.acf-field input[type="text"],
+.acf-field input[type="password"],
+.acf-field input[type="number"],
+.acf-field input[type="search"],
+.acf-field input[type="email"],
+.acf-field input[type="url"],
+.acf-field textarea {
+  border: $border-width $border-style $light-grey;
+  padding: 25px 10px;
+}
+
+.acf-fields > .acf-field {
+  position: relative;
+	margin: 0;
+	padding: 15px 0;
+	border: 0;
+}
+
+.acf-field .acf-label {
+  vertical-align: top;
+  margin: 0 0 5px;
+}
+
+.acf-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.acf-fields { position: relative; }
+
+.user-profile-select {
+  max-width: 300px;
+  input
+    { background-color: #f0f0f0 !important;
+  }
+}
+
+/* Intranät > Medlemmar & uppdrag sida
+   =================================== */
+
+div.table-wrapper { overflow-x: auto; }
+
+table.medlemmar-table th {
+  @include sm-caps;
+	@include font-size(13px);
+}
+
+table.medlemmar-table td { vertical-align: top !important; }
+
+/* Intranät > Medlemslista
+   =================================== */
+
+dl {
+  padding: 0.5em;
+  line-height: 1.5;
+}
+
+dt {
+  float: left;
+  clear: left;
+  width: 200px;
+  text-align: left;
+  font-family: $base-font-bold;
+  @include font-size(18px);
+  background: $white;
+}
+
+dd {
+  margin: 0 0 0 210px;
+  padding: 0 0 0.5em 0;
+  @include font-size(18px);
+  position: relative;
+}
+
+dl.list-heading dd::after {
+  content: 'Tel. & e-post';
+}
+
+.parent {
+  min-width: 250px;
+  display: inline-block;
+}
+
+a {
+  &.email-link {
+    position: absolute;
+    left: 290px;
+  }
+  &.tel-link, &.email-link {
+    font-size: 0;
+    color: $dark-grey;
+  }
+  &.tel-link:hover, &.email-link:hover {
+    color: $blue;
+  }
+  &.tel-link::before, &.email-link::before {
+    visibility: visible;
+    padding-top: 4px;
+  }
+}
+
+dl.list-heading {
+  border-bottom: 2px solid $lighter-grey;
+  font-family: $sans;
+  @include font-size(14px);
+  font-weight: $font-weight--bold;
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+  dt, dd {
+    padding-bottom: 0.1rem;
+    font-family: $sans;
+    @include font-size(14px);
+    font-weight: $font-weight--bold;
+  }
+}
+
+.child-plus {
+  padding-left: 0.5rem;
+}
+
+.child-plus-plus {
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 620px) {
+  dl {
+    &.list-heading {
+      display: none;
+    }
+    padding: 0;
+  }
+  dt {
+    float: none;
+    margin-top: 5px;
+  }
+  dd {
+    background: $lightest-grey;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .parent {
+    min-width: 0;
+  }
+  a.email-link {
+    position: relative;
+    left: auto;
+  }
+}
+
+/* Intranät > Styrelsen
+   =================================== */
+
+p.position {
+	@include font-size(21px);
+	border-bottom: $border-width $border-style $light-grey;
+	padding-bottom: 1.5rem;
+	max-width: 100%;
+}
