@@ -519,14 +519,3 @@ $result = add_role( 'personal', __( 'Personal' ),
 		'publish_posts' => false,
 	)
 );
-
-/**
- * Coming soon
- *
- */
-
-// add_action( 'genesis_after_header', 'my-function', 5 );
-// function your-function() {
-//
-// echo ' ...code ';
-// }
