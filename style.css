@@ -1519,7 +1519,6 @@ img.alignright,
     position: absolute;
     width: 180px;
     padding-left: 0;
-    border-top: 1px solid #eee;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
   }
@@ -1538,7 +1537,6 @@ img.alignright,
     width: 180px;
     padding-top: 15px;
     padding-bottom: 15px;
-    border: 1px solid #eee;
     border-top: 0;
   }
 }
