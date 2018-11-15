@@ -82,6 +82,7 @@
    Fonts
    ========================================================================== */
 @font-face {
+  font-display: auto;
   font-family: 'klinic_slabbold';
   src: url("fonts/klinicslabbold-webfont.eot");
   src: url("fonts/klinicslabbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbold-webfont.woff2") format("woff2"), url("fonts/klinicslabbold-webfont.woff") format("woff"), url("fonts/klinicslabbold-webfont.ttf") format("truetype"), url("fonts/klinicslabbold-webfont.svg#klinic_slabbold") format("svg");
@@ -90,6 +91,7 @@
 }
 
 @font-face {
+  font-display: auto;
   font-family: 'klinic_slabbook';
   src: url("fonts/klinicslabbook-webfont.eot");
   src: url("fonts/klinicslabbook-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbook-webfont.woff2") format("woff2"), url("fonts/klinicslabbook-webfont.woff") format("woff"), url("fonts/klinicslabbook-webfont.ttf") format("truetype"), url("fonts/klinicslabbook-webfont.svg#klinic_slabbook") format("svg");
@@ -98,6 +100,7 @@
 }
 
 @font-face {
+  font-display: auto;
   font-family: 'klinic_slabbook_italic';
   src: url("fonts/klinicslabbookit-webfont.eot");
   src: url("fonts/klinicslabbookit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbookit-webfont.woff2") format("woff2"), url("fonts/klinicslabbookit-webfont.woff") format("woff"), url("fonts/klinicslabbookit-webfont.ttf") format("truetype"), url("fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic") format("svg");
@@ -106,6 +109,7 @@
 }
 
 @font-face {
+  font-display: auto;
   font-family: 'klinic_slabmedium';
   src: url("fonts/klinicslabmedium-webfont.eot");
   src: url("fonts/klinicslabmedium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmedium-webfont.woff2") format("woff2"), url("fonts/klinicslabmedium-webfont.woff") format("woff"), url("fonts/klinicslabmedium-webfont.ttf") format("truetype"), url("fonts/klinicslabmedium-webfont.svg#klinic_slabmedium") format("svg");
@@ -114,6 +118,7 @@
 }
 
 @font-face {
+  font-display: auto;
   font-family: 'klinic_slabmedium_italic';
   src: url("fonts/klinicslabmediumit-webfont.eot");
   src: url("fonts/klinicslabmediumit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmediumit-webfont.woff2") format("woff2"), url("fonts/klinicslabmediumit-webfont.woff") format("woff"), url("fonts/klinicslabmediumit-webfont.ttf") format("truetype"), url("fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic") format("svg");
