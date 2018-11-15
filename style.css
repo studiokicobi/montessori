@@ -1538,6 +1538,7 @@ img.alignright,
     width: 180px;
     padding-top: 15px;
     padding-bottom: 15px;
+    /*border: $border-width $border-style $border-color;*/
     border-top: 0;
   }
 }
