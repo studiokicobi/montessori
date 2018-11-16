@@ -10,34 +10,34 @@
  * @link    https://www.studiopress.com/
  */
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_css' );
+add_action('wp_enqueue_scripts', 'genesis_sample_css');
 /**
  * Checks the settings for the link color, and accent color.
  * If any of these value are set the appropriate CSS is output.
  *
  * @since 2.2.3
  */
-function genesis_sample_css() {
+function genesis_sample_css()
+{
+    $handle = defined('CHILD_THEME_NAME') && CHILD_THEME_NAME ? sanitize_title_with_dashes(CHILD_THEME_NAME) : 'child-theme';
 
-	$handle = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
+    $color_link   = get_theme_mod('genesis_sample_link_color', genesis_sample_customizer_get_default_link_color());
+    $color_accent = get_theme_mod('genesis_sample_accent_color', genesis_sample_customizer_get_default_accent_color());
+    $logo         = wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full');
 
-	$color_link   = get_theme_mod( 'genesis_sample_link_color', genesis_sample_customizer_get_default_link_color() );
-	$color_accent = get_theme_mod( 'genesis_sample_accent_color', genesis_sample_customizer_get_default_accent_color() );
-	$logo         = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+    if ($logo) {
+        $logo_height           = absint($logo[2]);
+        $logo_max_width        = get_theme_mod('genesis_sample_logo_width', 350);
+        $logo_width            = absint($logo[1]);
+        $logo_ratio            = $logo_width / $logo_height;
+        $logo_effective_height = min($logo_width, $logo_max_width) / $logo_ratio;
+        $logo_padding          = max(0, (60 - $logo_effective_height) / 2);
+    }
 
-	if ( $logo ) {
-		$logo_height           = absint( $logo[2] );
-		$logo_max_width        = get_theme_mod( 'genesis_sample_logo_width', 350 );
-		$logo_width            = absint( $logo[1] );
-		$logo_ratio            = $logo_width / $logo_height;
-		$logo_effective_height = min( $logo_width, $logo_max_width ) / $logo_ratio;
-		$logo_padding          = max( 0, ( 60 - $logo_effective_height ) / 2 );
-	}
+    $css = '';
 
-	$css = '';
-
-	$css .= ( genesis_sample_customizer_get_default_link_color() !== $color_link ) ? sprintf(
-		'
+    $css .= (genesis_sample_customizer_get_default_link_color() !== $color_link) ? sprintf(
+        '
 
 		a,
 		.entry-title a:focus,
@@ -54,11 +54,12 @@ function genesis_sample_css() {
 			color: %s;
 		}
 
-		', $color_link
-	) : '';
+		',
+        $color_link
+    ) : '';
 
-	$css .= ( genesis_sample_customizer_get_default_accent_color() !== $color_accent ) ? sprintf(
-		'
+    $css .= (genesis_sample_customizer_get_default_accent_color() !== $color_accent) ? sprintf(
+        '
 
 		button:focus,
 		button:hover,
@@ -80,28 +81,31 @@ function genesis_sample_css() {
 			background-color: %s;
 			color: %s;
 		}
-		', $color_accent, genesis_sample_color_contrast( $color_accent )
-	) : '';
+		',
+        $color_accent,
+        genesis_sample_color_contrast($color_accent)
+    ) : '';
 
-	$css .= ( has_custom_logo() && ( 200 <= $logo_effective_height ) ) ?
-		'
+    $css .= (has_custom_logo() && (200 <= $logo_effective_height)) ?
+        '
 		.site-header {
 			position: static;
 		}
 		'
-	: '';
+    : '';
 
-	$css .= ( has_custom_logo() && ( 350 !== $logo_max_width ) ) ? sprintf(
-		'
+    $css .= (has_custom_logo() && (350 !== $logo_max_width)) ? sprintf(
+        '
 		.wp-custom-logo .site-container .title-area {
 			max-width: %spx;
 		}
-		', $logo_max_width
-	) : '';
+		',
+        $logo_max_width
+    ) : '';
 
-	// Place menu below logo and center logo once it gets big.
-	$css .= ( has_custom_logo() && ( 600 <= $logo_max_width ) ) ?
-		'
+    // Place menu below logo and center logo once it gets big.
+    $css .= (has_custom_logo() && (600 <= $logo_max_width)) ?
+        '
 		.wp-custom-logo .title-area,
 		.wp-custom-logo .menu-toggle,
 		.wp-custom-logo .nav-primary {
@@ -123,18 +127,18 @@ function genesis_sample_css() {
 			}
 		}
 		'
-	: '';
+    : '';
 
-	$css .= ( has_custom_logo() && $logo_padding ) ? sprintf(
-		'
+    $css .= (has_custom_logo() && $logo_padding) ? sprintf(
+        '
 		.wp-custom-logo .title-area {
 			padding-top: %spx;
 		}
-		', $logo_padding + 5
-	) : '';
+		',
+        $logo_padding + 5
+    ) : '';
 
-	if ( $css ) {
-		wp_add_inline_style( $handle, $css );
-	}
-
+    if ($css) {
+        wp_add_inline_style($handle, $css);
+    }
 }
