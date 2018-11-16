@@ -1,8 +1,9 @@
-<?php 
+<?php
 
-add_action( 'genesis_entry_content', 'acf_loop' ); 
+add_action('genesis_entry_content', 'acf_loop');
 
-function acf_loop() {
+function acf_loop()
+{
 
 // ----------------------------------------
 // Add Advanced Custom Fields content below
@@ -14,7 +15,7 @@ function acf_loop() {
 
 // ----------------------------------------
 // Close ACF loop
-} 
+}
 // ----------------------------------------
 
 // Run the Genesis loop
