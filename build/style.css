@@ -1519,7 +1519,7 @@ img.alignright,
 @media only screen and (min-width: 960px) {
   .genesis-nav-menu .sub-menu {
     position: absolute;
-    width: 180px;
+    width: 255px;
     padding-left: 0;
     border-top: 1px solid #eee;
     opacity: 0;
@@ -1612,7 +1612,7 @@ img.alignright,
 @media only screen and (min-width: 960px) {
   .genesis-responsive-menu .genesis-nav-menu .sub-menu {
     position: absolute;
-    width: 180px;
+    width: 255px;
     padding-left: 0;
     border-top: 1px solid #eee;
     opacity: 0;
@@ -2404,6 +2404,10 @@ a.cta:hover {
 .matsedel ul li p em {
   font-size: 12px;
   font-size: 1.2rem;
+}
+
+body.home article {
+  margin-bottom: 0;
 }
 
 /* Kontakt page

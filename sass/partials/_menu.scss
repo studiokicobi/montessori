@@ -98,7 +98,7 @@
 
 		@media only screen and (min-width: $standard-screen-width) {
 			position: absolute;
-			width: 180px;
+			width: 255px;
 			padding-left: 0;
 			border-top: $border-width $border-style $border-color;
 			opacity: 0;
@@ -191,7 +191,7 @@
 
 			@media only screen and (min-width: $standard-screen-width) {
 				position: absolute;
-				width: 180px;
+				width: 255px;
 				padding-left: 0;
 				border-top: $border-width $border-style $border-color;
 				opacity: 0;
