@@ -1537,7 +1537,7 @@ img.alignright,
 
 @media only screen and (min-width: 960px) {
   .genesis-nav-menu .sub-menu a {
-    width: 180px;
+    width: 255px;
     padding-top: 15px;
     padding-bottom: 15px;
     /*border: $border-width $border-style $border-color;*/
