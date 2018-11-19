@@ -2752,6 +2752,7 @@ p.position {
 
 .datepick-inline .date_available a {
   font-family: "Lato", sans-serif !important;
+  text-shadow: 0 !important;
 }
 
 /* ==========================================================================
