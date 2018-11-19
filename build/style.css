@@ -2738,7 +2738,7 @@ p.position {
   box-shadow: 0 0 0 0 !important;
 }
 
-.booking_form input,
+.booking_form input[type="text"],
 .booking_form textarea {
   width: 100% !important;
 }
