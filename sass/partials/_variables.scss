@@ -15,7 +15,7 @@ $base-font-bold: "klinic_slabbold", serif;
 $base-font-italic: "klinic_slabbook_italic", serif;
 $base-font-medium: "klinic_slabmedium", serif;
 $base-font-medium-italic: "klinic_slabmedium_italic", serif;
-$sans: "Lato", sans-serif;
+$sans: "Lato", sans-serif !important;
 
 // Screen widths, Media queries - WC widths in WC variables
 $standard-screen-width: 960px;

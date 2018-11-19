@@ -647,7 +647,7 @@ input[type="submit"],
   text-decoration: none;
   cursor: pointer;
   border-radius: 100px;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -1066,7 +1066,7 @@ th:first-child {
 .breadcrumb {
   font-size: 13px;
   margin-bottom: 5px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
   font-weight: 700;
   color: #474E5D;
 }
@@ -1759,7 +1759,7 @@ img.alignright,
 /* Primary menu
    =================================== */
 .menu-primary a {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1771,7 +1771,7 @@ img.alignright,
 li.login a,
 li.logout a {
   color: #07B4F3;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -1792,7 +1792,7 @@ li.logout a:hover {
 }
 
 .login-submit input {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1831,7 +1831,7 @@ ul.intranet li {
 
 ul.intranet li a {
   color: #fff;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1995,7 +1995,7 @@ body.home .entry-content {
 .sidebar {
   font-size: 12px;
   line-height: 1.5;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2230,7 +2230,7 @@ a.cta {
   text-align: center;
   border-radius: 50px;
   margin: 10px auto 80px;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2357,7 +2357,7 @@ a.cta:hover {
 }
 
 .matsedel h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
   font-size: 14px;
   font-size: 1.4rem;
   letter-spacing: 1px;
@@ -2392,7 +2392,7 @@ a.cta:hover {
 }
 
 .matsedel ul li strong {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2416,7 +2416,7 @@ body.home article {
 /* Kontakt page
    =================================== */
 .wpcf7-submit {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2453,7 +2453,7 @@ body.home article {
 /* Intranät > Member Profile page
    =================================== */
 label {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2540,7 +2540,7 @@ div.table-wrapper {
 }
 
 table.medlemmar-table th {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2608,7 +2608,7 @@ a.email-link::before, a.tel-link::before {
 
 dl.list-heading {
   border-bottom: 2px solid #eee;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 700;
@@ -2619,7 +2619,7 @@ dl.list-heading {
 dl.list-heading dd,
 dl.list-heading dt {
   padding-bottom: 0.1rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 700;
@@ -2675,7 +2675,7 @@ p.position {
    =================================== */
 .wpdevbk form,
 .wpdevbk p {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
 }
 
 .datepick-inline {
@@ -2698,7 +2698,7 @@ p.position {
   text-decoration: none;
   cursor: pointer;
   border-radius: 100px;
-  font-family: "Lato", sans-serif !important;
+  font-family: "Lato", sans-serif !important !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -3015,7 +3015,7 @@ p.position {
   body.error404 .content h1 {
     font-size: 190px;
     font-size: 19rem;
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif !important;
     font-weight: 700;
   }
   body.error404 .content h2 {
@@ -3206,7 +3206,7 @@ p.position {
     margin: 0 auto;
     position: relative;
     z-index: 1001;
-    font-family: "Lato", sans-serif !important;
+    font-family: "Lato", sans-serif !important !important;
     text-transform: uppercase;
     letter-spacing: 0.1rem !important;
     font-weight: 700 !important;
