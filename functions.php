@@ -83,13 +83,13 @@ function genesis_sample_enqueue_scripts_styles()
         genesis_sample_responsive_menu_settings()
     );
 
-    // 	wp_enqueue_script(
-// 		'montessori',
-// 		get_stylesheet_directory_uri() . '/js/montessori.js',
-// 		array( 'jquery' ),
-// 		CHILD_THEME_VERSION,
-// 		true
-// 	);
+    wp_enqueue_script(
+ 		'montessori',
+ 		get_stylesheet_directory_uri() . '/js/montessori.min.js',
+ 		array( 'jquery' ),
+ 		CHILD_THEME_VERSION,
+ 		true
+ 	);
 }
 
 /**
@@ -356,7 +356,7 @@ function add_acf_form_head()
 
 add_action('get_header', 'add_acf_form_head', 7);
 
-// FIXTHIS: Save email correctly 
+// FIXTHIS: Save email correctly
 
 function my_acf_save_post($post_id)
 {
