@@ -2743,11 +2743,15 @@ p.position {
   width: 100% !important;
 }
 
+.datepick-inline .date2approve,
 .datepick-inline .date_available,
-.datepick-inline .date_available.datepick-unselectable,
-.datepick-inline .date2approve {
+.datepick-inline .date_available.datepick-unselectable {
   color: #fff !important;
   text-shadow: none !important;
+}
+
+.datepick-inline .date_available a {
+  font-family: "Lato", sans-serif !important;
 }
 
 /* ==========================================================================
