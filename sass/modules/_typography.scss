@@ -8,7 +8,7 @@
 
 // Fake small caps, tighter kerning
 @mixin sm-caps-tight {
-  font-family: $sans !important;
+  font-family: $sans;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;

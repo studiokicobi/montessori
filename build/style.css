@@ -1759,7 +1759,7 @@ img.alignright,
 /* Primary menu
    =================================== */
 .menu-primary a {
-  font-family: "Lato", sans-serif !important !important;
+  font-family: "Lato", sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1792,7 +1792,7 @@ li.logout a:hover {
 }
 
 .login-submit input {
-  font-family: "Lato", sans-serif !important !important;
+  font-family: "Lato", sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1831,7 +1831,7 @@ ul.intranet li {
 
 ul.intranet li a {
   color: #fff;
-  font-family: "Lato", sans-serif !important !important;
+  font-family: "Lato", sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
