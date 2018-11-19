@@ -506,13 +506,18 @@ p.position {
 /* Intranät > Städning
    =================================== */
 .wpdevbk form,
-.wpdevbk p {
+.wpdevbk p,
+.date_available {
 	font-family: $sans;
+}
+
+.wpdevbk p {
+	margin: 2rem 0 1rem;
 }
 
 .datepick-inline {
 	border: 0 !important;
-	box-shadow: 0 !important;
+	box-shadow: 0 0 0 0 !important;
 	border-radius: !important;
 }
 
@@ -546,7 +551,7 @@ p.position {
 .booking_form_div input[type="text"],
 .booking_form_div select,
 .booking_form_div textarea {
-	border-color: $border-color !important;
+	border-color: #ddd !important;
 	border-radius: 0 !important;
 }
 
@@ -557,5 +562,5 @@ p.position {
 
 .wpdevbk input,
 .wpdevbk textarea {
-	box-shadow: 0 !important;
+	box-shadow: 0 0 0 0 !important;
 }
