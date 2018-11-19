@@ -2673,15 +2673,22 @@ p.position {
 
 /* Intranät > Städning
    =================================== */
+.booking_form_div,
 .date_available,
+.hasDatepick,
 .wpdevbk form,
-.wpdevbk p,
-.booking_form_div p {
+.wpdevbk p {
   font-family: "Lato", sans-serif !important;
 }
 
-.wpdevbk p {
-  margin: 2rem 0 1rem !important;
+.booking_form_div p {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0 !important;
+}
+
+.booking_form_div input[type="text"],
+.booking_form_div textarea {
+  font-family: "klinic_slabbook", serif;
 }
 
 .datepick-inline {
@@ -2754,6 +2761,10 @@ p.position {
 .datepick-inline .date_available a {
   font-family: "Lato", sans-serif !important;
   text-shadow: 0 !important;
+}
+
+.booking_form input[type="button"] {
+  margin-bottom: 30px;
 }
 
 /* ==========================================================================

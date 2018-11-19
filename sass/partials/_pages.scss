@@ -505,16 +505,25 @@ p.position {
 }
 /* Intranät > Städning
    =================================== */
+.booking_form_div,
 .date_available,
+.hasDatepick,
 .wpdevbk form,
-.wpdevbk p,
-.booking_form_div p {
+.wpdevbk p {
 	font-family: $sans;
 }
 
-.wpdevbk p {
-	margin: 2rem 0 1rem !important;
+.booking_form_div p {
+	font-size: 1.2rem;
+	margin: 2rem 0 1rem 0 !important;
 }
+
+.booking_form_div input[type="text"],
+.booking_form_div textarea {
+	font-family: $base-font;
+}
+
+.page-id-910 h3 {}
 
 .datepick-inline {
 	border: 0 !important;
@@ -581,4 +590,8 @@ p.position {
 .datepick-inline .date_available a {
 	font-family: $sans;
 	text-shadow: 0 !important;
+}
+
+.booking_form input[type="button"] {
+	margin-bottom: 30px;
 }
