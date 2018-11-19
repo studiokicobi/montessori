@@ -511,9 +511,9 @@ p.position {
 }
 
 .datepick-inline {
-	border: 0;
-	box-shadow: none;
-	border-radius: 0;
+	border: 0 !important;
+	box-shadow: 0 !important;
+	border-radius: !important;
 }
 
 .booking_form input[type="button"],
@@ -552,5 +552,10 @@ p.position {
 
 .booking_form_div input[type="text"] {
 	height: auto !important;
-	padding: 25px 10px !important;
+	padding: 15px 10px !important;
+}
+
+.wpdevbk input,
+.wpdevbk textarea {
+	box-shadow: 0 !important;
 }
