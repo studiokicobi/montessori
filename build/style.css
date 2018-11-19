@@ -2158,7 +2158,7 @@ body.home .content p {
   line-height: 1.2;
   text-align: center;
   max-width: 680px;
-  margin: 50px auto 220px auto;
+  margin: 50px auto 220px;
 }
 
 #hero-1 p {
@@ -2171,7 +2171,7 @@ body.home .content p {
   background-repeat: no-repeat;
   height: 263px;
   width: 860px;
-  margin: -155px auto 0 auto;
+  margin: -155px auto 0;
 }
 
 #hero-message-cont {
@@ -2229,7 +2229,7 @@ a.cta {
   display: inline-block;
   text-align: center;
   border-radius: 50px;
-  margin: 10px auto 80px auto;
+  margin: 10px auto 80px;
   font-family: "Lato", sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
@@ -2344,7 +2344,7 @@ a.cta:hover {
   background-size: 250px;
   background-repeat: no-repeat;
   width: 100vw;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 60px;
 }
 
 .matsedel h3 {
@@ -2352,7 +2352,7 @@ a.cta:hover {
   width: 100%;
   font-size: 30px;
   font-size: 3.0rem;
-  padding: 150px 0 30px 0;
+  padding: 150px 0 30px;
   color: #111;
 }
 
@@ -2363,7 +2363,7 @@ a.cta:hover {
   letter-spacing: 1px;
   font-weight: 700;
   text-align: center;
-  margin: 0 -20px 10px -20px;
+  margin: 0 -20px 10px;
   padding: 15px 0;
   background: #fff;
   border-radius: 5px 5px 0 0;
@@ -2572,7 +2572,7 @@ dt {
 
 dd {
   margin: 0 0 0 210px;
-  padding: 0 0 0.5em 0;
+  padding: 0 0 0.5em;
   font-size: 18px;
   font-size: 1.8rem;
   position: relative;
@@ -2592,16 +2592,16 @@ a.email-link {
   left: 290px;
 }
 
-a.tel-link, a.email-link {
+a.email-link, a.tel-link {
   font-size: 0;
   color: #333;
 }
 
-a.tel-link:hover, a.email-link:hover {
+a.email-link:hover, a.tel-link:hover {
   color: #07B4F3;
 }
 
-a.tel-link::before, a.email-link::before {
+a.email-link::before, a.tel-link::before {
   visibility: visible;
   padding-top: 4px;
 }
@@ -2616,7 +2616,8 @@ dl.list-heading {
   line-height: 1 !important;
 }
 
-dl.list-heading dt, dl.list-heading dd {
+dl.list-heading dd,
+dl.list-heading dt {
   padding-bottom: 0.1rem;
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -2668,6 +2669,63 @@ p.position {
   border-bottom: 1px solid #ddd;
   padding-bottom: 1.5rem;
   max-width: 100%;
+}
+
+/* Intranät > Städning
+   =================================== */
+.wpdevbk form,
+.wpdevbk p {
+  font-family: "Lato", sans-serif;
+}
+
+.datepick-inline {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.booking_form input[type="button"],
+.booking_form input[type="submit"] {
+  transition: all 0.2s ease-in-out;
+  background-color: #07B4F3;
+  border: 0;
+  color: #fff;
+  width: auto;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: normal;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+}
+
+.booking_form input[type="button"]:focus, .booking_form input[type="button"]:hover,
+.booking_form input[type="submit"]:focus,
+.booking_form input[type="submit"]:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.booking_form input[type="button"].small,
+.booking_form input[type="submit"].small {
+  padding: 8px 16px;
+}
+
+.booking_form_div input[type="text"],
+.booking_form_div select,
+.booking_form_div textarea {
+  border-color: #eee;
+  border-radius: 0;
+}
+
+.booking_form_div input[type="text"] {
+  height: auto;
+  padding: 25px 10px;
 }
 
 /* ==========================================================================
