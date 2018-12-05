@@ -6,14 +6,14 @@
 
 
 /**
- * Uncomment to force clear CSS Cache while developing theme:
+ * Force clear CSS Cache while developing theme:
  *
  */
 
-add_filter( 'stylesheet_uri', 'child_stylesheet_uri' );
-function child_stylesheet_uri( $stylesheet_uri ) {
-	return add_query_arg( 'v', filemtime( get_stylesheet_directory() . '/style.css' ), $stylesheet_uri );
-}
+// add_filter( 'stylesheet_uri', 'child_stylesheet_uri' );
+// function child_stylesheet_uri( $stylesheet_uri ) {
+// return add_query_arg( 'v', filemtime( get_stylesheet_directory() . '/style.css' ), $stylesheet_uri );
+// }
 
 
 /**
@@ -442,10 +442,7 @@ add_filter('wp_nav_menu_args', 'primary_wp_nav_menu_args');
  * Automatically add child pages to nav
  *
  * auto_child_page_menu
- *
- * class to add top level page menu items all child pages on the fly
- * @author Ohad Raz <admin@bainternet.info>
- */
+ * */
 
 class auto_child_page_menu
 {
@@ -507,7 +504,7 @@ class auto_child_page_menu
 new auto_child_page_menu();
 
 /**
- * Add a custom user role for the Staff
+ * Add a custom user role for Staff
  *
  */
 
