@@ -67,7 +67,7 @@ function genesis_404()
         echo apply_filters('genesis_404_entry_content', '<h2>' . 'Sidan kunde inte hittas' . '</h2>' . '<p>' . sprintf(__('Vi ber om ursäkt, men på den här adressen finns det inte någon sida. Det kan bero på tillfälliga tekniska problem eller att sidan du försökt nå är borttagen.' . '</p><p>' . '<a href="%s">» Tillbaka till startsidan</a><br>', 'genesis'), trailingslashit(home_url())) . '</p>'); else :
     ?>
 
-		<p><?php /* translators: %s: URL for current website. */ printf(__('The page you are looking for no longer exists. Perhaps you can return back to the site\'s <a href="%s">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below.', 'genesis'), esc_url(trailingslashit(home_url()))); ?></p>
+		<p><?php /* translators: %s: URL for current website. */ printf(__('Vi ber om ursäkt, men på den här adressen finns det inte någon sida. Det kan bero på tillfälliga tekniska problem eller att sidan du försökt nå är borttagen.', 'genesis'), esc_url(trailingslashit(home_url()))); ?></p>
 
 	<?php
     endif;
