@@ -87,23 +87,27 @@
 ...
 */
 
-// Modules
-@import "modules/typography";
+@charset 'UTF-8';
 
-// Partials
-@import "partials/fonts";
-@import "partials/variables";
-@import "partials/resets";
-@import "partials/defaults";
-@import "partials/structure";
-@import "partials/common-classes";
-@import "partials/widgets";
-@import "partials/plugins";
-@import "partials/header";
-@import "partials/menu";
-@import "partials/content-area";
-@import "partials/sidebar";
-@import "partials/footer-area";
-@import "partials/pages";
-@import "partials/media";
-@import "partials/print";
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+// 2. Vendors
+@import "vendor/resets";
+
+// 3. Base stuff
+@import "base/base", "base/fonts", "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/header", "layout/footer", "layout/common-classes",
+  "layout/content-area", "layout/media", "layout/menu", "layout/structure",
+  "layout/sidebar";
+
+// 5. Components
+@import "components/widgets", "components/plugins";
+
+// 6. Page-specific styles
+@import "pages/home";
+
+// 7. Themes
+@import "themes/print";

@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Kontakt page
+   ========================================================================== */
+
+.wpcf7-submit {
+  @include sm-caps;
+  border-radius: 2px;
+  padding: 15px 25px !important;
+  margin-top: 12px;
+  @include font-size(12px);
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 40vh;
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin-bottom: 3rem;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.form-rubrik {
+  border-top: 2px solid #eee;
+  margin-top: 3rem;
+  padding-top: 3rem;
+}
