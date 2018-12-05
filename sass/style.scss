@@ -100,8 +100,8 @@
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/common-classes",
-  "layout/content-area", "layout/media", "layout/menu", "layout/structure",
-  "layout/sidebar";
+  "layout/content-area", "layout/menu", "layout/structure", "layout/sidebar",
+  "layout/media";
 
 // 5. Components
 @import "components/widgets", "components/plugins";

@@ -1433,6 +1433,606 @@ body.home .entry-content {
 }
 
 /* ==========================================================================
+   Site Navigation
+   ========================================================================== */
+.genesis-nav-menu {
+  clear: both;
+  width: 100%;
+  line-height: 1;
+}
+
+.genesis-nav-menu .menu-item {
+  display: block;
+  float: none;
+  position: relative;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu .menu-item {
+    display: inline-block;
+  }
+}
+
+.genesis-nav-menu .menu-item:focus,
+.genesis-nav-menu .menu-item:hover {
+  position: relative;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu .menu-item:focus .sub-menu:focus,
+  .genesis-nav-menu .menu-item:hover .sub-menu:hover {
+    z-index: 100;
+  }
+}
+
+.genesis-nav-menu .menu-item:focus > .sub-menu,
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  display: block;
+  left: auto;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu > .menu-bold > a {
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu > .menu-highlight > a {
+    margin-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #333;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu > .menu-highlight > a:focus,
+  .genesis-nav-menu > .menu-highlight > a:hover {
+    background-color: #07b4f3;
+  }
+}
+
+.genesis-nav-menu a {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  outline-offset: -1px;
+  color: #07b4f3;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.genesis-nav-menu .sub-menu {
+  display: block;
+  clear: both;
+  position: static;
+  z-index: 99;
+  width: 100%;
+  margin: 0;
+  padding-left: 15px;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu .sub-menu {
+    position: absolute;
+    width: 255px;
+    padding-left: 0;
+    border-top: 1px solid #eee;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+.genesis-nav-menu .sub-menu a {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu .sub-menu a {
+    width: 255px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /*border: $border-width $border-style $border-color;*/
+    border-top: 0;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-nav-menu .sub-menu .sub-menu {
+    margin: -46px 0 0 179px;
+  }
+}
+
+.genesis-nav-menu .sub-menu:focus-within {
+  opacity: 1;
+}
+
+/* Avoid flash of desktop menu on mobile devices.
+   =================================== */
+.js nav {
+  display: none;
+  position: relative;
+}
+
+@media only screen and (min-width: 960px) {
+  .js nav {
+    display: block;
+  }
+}
+
+/* Responsive Menu
+   =================================== */
+.menu .menu-item:focus {
+  position: static;
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
+.genesis-responsive-menu {
+  display: none;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-responsive-menu {
+    display: block;
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu,
+.genesis-responsive-menu .genesis-nav-menu .menu-item:focus > .sub-menu {
+  display: none;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+  display: none;
+  clear: both;
+  position: static;
+  z-index: 99;
+  left: -9999px;
+  width: 100%;
+  margin: 0;
+  padding-left: 15px;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 960px) {
+  .genesis-responsive-menu .genesis-nav-menu .sub-menu {
+    position: absolute;
+    width: 255px;
+    padding-left: 0;
+    border-top: 1px solid #eee;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+.menu-toggle {
+  display: block;
+  visibility: visible;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  border-width: 0;
+  color: #333;
+  background-color: transparent;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:focus, .menu-toggle:hover {
+  border-width: 0;
+  color: #07b4f3;
+  background-color: transparent;
+}
+
+.menu-toggle.activated:before {
+  content: "\f335";
+}
+
+.site-header .menu-toggle:before {
+  float: left;
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+  text-rendering: auto;
+}
+
+.sub-menu-toggle {
+  display: block;
+  visibility: visible;
+  float: right;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 9px 10px;
+  border-width: 0;
+  color: #333;
+  background-color: transparent;
+  text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+  .sub-menu-toggle {
+    display: none;
+  }
+}
+
+.sub-menu-toggle:focus, .sub-menu-toggle:hover {
+  border-width: 0;
+  color: #07b4f3;
+  background-color: transparent;
+}
+
+.sub-menu-toggle:before {
+  display: inline-block;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  text-rendering: auto;
+}
+
+.sub-menu .sub-menu-toggle {
+  padding: 12px 10px;
+}
+
+.sub-menu-toggle.activated:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* Header Menu
+   =================================== */
+.nav-primary {
+  clear: left;
+}
+
+@media only screen and (min-width: 960px) {
+  .nav-primary {
+    float: right;
+    clear: none;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .nav-primary .genesis-nav-menu a {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/* Footer Menu
+   =================================== */
+.nav-secondary {
+  margin-top: 10px;
+}
+
+.nav-secondary .genesis-nav-menu {
+  line-height: 1.5;
+}
+
+.nav-secondary .menu-item {
+  display: inline-block;
+}
+
+.nav-secondary a {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+/* Primary menu
+   =================================== */
+.menu-primary a {
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem !important;
+  font-weight: 700 !important;
+  font-size: 12px;
+}
+
+/* Login
+   =================================== */
+li.login a,
+li.logout a {
+  color: #07b4f3;
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+  font-size: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+li.login:hover,
+li.logout:hover {
+  background: #07b4f3;
+  border: 1px solid #07b4f3;
+}
+
+li.login a:hover,
+li.logout a:hover {
+  color: #fff;
+}
+
+.login-submit input {
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem !important;
+  font-weight: 700 !important;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* adjust lost pw link in login modal */
+div.remodal a {
+  display: block;
+  margin-top: 110px;
+}
+
+/* Intranet menu for logged in users
+   =================================== */
+body.error404 nav.nav-intranet {
+  display: none;
+}
+
+nav.nav-intranet {
+  background: #042f4c;
+}
+
+ul.intranet {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1140px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  padding-left: 80px;
+}
+
+ul.intranet li {
+  padding: 0 15px;
+}
+
+ul.intranet li a {
+  color: #fff;
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem !important;
+  font-weight: 700 !important;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-top: 6px;
+}
+
+ul.intranet li a:hover {
+  color: #07b4f3 !important;
+}
+
+/* ul.intranet li a:link { color: $blue !important; } */
+/* ul.intranet li a:visited { color: $blue !important; } */
+/* ul.intranet li a:active { color: $blue !important; } */
+/* ul.intranet :focus { color: $blue !important; } */
+.toggle,
+[id^="drop"] {
+  display: none;
+}
+
+/* ==========================================================================
+   Structure and Layout
+   ========================================================================== */
+/* Site Container
+   =================================== */
+.site-container {
+  word-wrap: break-word;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+  background: #fff;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Site Inner
+   =================================== */
+.site-inner {
+  clear: both;
+  margin: 0 auto;
+  padding: 60px 30px 0;
+}
+
+@media only screen and (min-width: 960px) {
+  .site-inner {
+    max-width: 1140px;
+    margin-top: 0;
+  }
+}
+
+/* Sticky footer styles
+   =================================== */
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-inner {
+  flex: 1;
+  width: 100vw;
+}
+
+/* Content
+   =================================== */
+@media only screen and (min-width: 960px) {
+  .content {
+    float: left;
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .sidebar-content .content {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .full-width-content .content,
+  .landing-page .content {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  /* Column Classes
+	--------------------------------------------- */
+  .five-sixths,
+  .four-sixths,
+  .one-fourth,
+  .one-half,
+  .one-sixth,
+  .one-third,
+  .three-fourths,
+  .three-sixths,
+  .two-fourths,
+  .two-sixths,
+  .two-thirds {
+    float: left;
+    margin-left: 2.564102564102564%;
+  }
+  .one-half,
+  .three-sixths,
+  .two-fourths {
+    width: 48.717948717948715%;
+  }
+  .one-third,
+  .two-sixths {
+    width: 31.623931623931625%;
+  }
+  .four-sixths,
+  .two-thirds {
+    width: 65.81196581196582%;
+  }
+  .one-fourth {
+    width: 23.076923076923077%;
+  }
+  .three-fourths {
+    width: 74.35897435897436%;
+  }
+  .one-sixth {
+    width: 14.52991452991453%;
+  }
+  .five-sixths {
+    width: 82.90598290598291%;
+  }
+  .first {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+.sidebar {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+}
+
+@media only screen and (min-width: 960px) {
+  .sidebar {
+    float: right;
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .sidebar-content .sidebar {
+    float: left;
+  }
+}
+
+.sidebar .widget {
+  margin-bottom: 40px;
+}
+
+.sidebar p {
+  margin-bottom: 20px;
+}
+
+.menu-forskola-container {
+  padding: 20px 30px;
+}
+
+.menu-forskola-container a {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 /* ==========================================================================
@@ -2050,606 +2650,6 @@ body.home .entry-content {
     font-size: 18px;
     font-size: 1.8rem;
   }
-}
-
-/* ==========================================================================
-   Site Navigation
-   ========================================================================== */
-.genesis-nav-menu {
-  clear: both;
-  width: 100%;
-  line-height: 1;
-}
-
-.genesis-nav-menu .menu-item {
-  display: block;
-  float: none;
-  position: relative;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu .menu-item {
-    display: inline-block;
-  }
-}
-
-.genesis-nav-menu .menu-item:focus,
-.genesis-nav-menu .menu-item:hover {
-  position: relative;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu .menu-item:focus .sub-menu:focus,
-  .genesis-nav-menu .menu-item:hover .sub-menu:hover {
-    z-index: 100;
-  }
-}
-
-.genesis-nav-menu .menu-item:focus > .sub-menu,
-.genesis-nav-menu .menu-item:hover > .sub-menu {
-  display: block;
-  left: auto;
-  opacity: 1;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu > .menu-bold > a {
-    font-weight: 700;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu > .menu-highlight > a {
-    margin-left: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 3px;
-    color: #fff;
-    background-color: #333;
-    font-weight: 700;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu > .menu-highlight > a:focus,
-  .genesis-nav-menu > .menu-highlight > a:hover {
-    background-color: #07b4f3;
-  }
-}
-
-.genesis-nav-menu a {
-  display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  outline-offset: -1px;
-  color: #07b4f3;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.genesis-nav-menu a:focus,
-.genesis-nav-menu a:hover,
-.genesis-nav-menu .current-menu-item > a,
-.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-.genesis-nav-menu .sub-menu {
-  display: block;
-  clear: both;
-  position: static;
-  z-index: 99;
-  width: 100%;
-  margin: 0;
-  padding-left: 15px;
-  opacity: 1;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu .sub-menu {
-    position: absolute;
-    width: 255px;
-    padding-left: 0;
-    border-top: 1px solid #eee;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
-}
-
-.genesis-nav-menu .sub-menu a {
-  position: relative;
-  width: 100%;
-  background-color: #fff;
-  font-size: 12px;
-  word-wrap: break-word;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu .sub-menu a {
-    width: 255px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    /*border: $border-width $border-style $border-color;*/
-    border-top: 0;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-nav-menu .sub-menu .sub-menu {
-    margin: -46px 0 0 179px;
-  }
-}
-
-.genesis-nav-menu .sub-menu:focus-within {
-  opacity: 1;
-}
-
-/* Avoid flash of desktop menu on mobile devices.
-   =================================== */
-.js nav {
-  display: none;
-  position: relative;
-}
-
-@media only screen and (min-width: 960px) {
-  .js nav {
-    display: block;
-  }
-}
-
-/* Responsive Menu
-   =================================== */
-.menu .menu-item:focus {
-  position: static;
-}
-
-.menu .menu-item > a:focus + ul.sub-menu,
-.menu .menu-item.sfHover > ul.sub-menu {
-  left: auto;
-  opacity: 1;
-}
-
-.genesis-responsive-menu {
-  display: none;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-responsive-menu {
-    display: block;
-  }
-}
-
-.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu,
-.genesis-responsive-menu .genesis-nav-menu .menu-item:focus > .sub-menu {
-  display: none;
-}
-
-.genesis-responsive-menu .genesis-nav-menu .sub-menu {
-  display: none;
-  clear: both;
-  position: static;
-  z-index: 99;
-  left: -9999px;
-  width: 100%;
-  margin: 0;
-  padding-left: 15px;
-  opacity: 1;
-}
-
-@media only screen and (min-width: 960px) {
-  .genesis-responsive-menu .genesis-nav-menu .sub-menu {
-    position: absolute;
-    width: 255px;
-    padding-left: 0;
-    border-top: 1px solid #eee;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
-}
-
-.menu-toggle {
-  display: block;
-  visibility: visible;
-  float: right;
-  overflow: hidden;
-  position: relative;
-  z-index: 1000;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 15px 0;
-  border-width: 0;
-  color: #333;
-  background-color: transparent;
-  line-height: 20px;
-  text-align: center;
-}
-
-@media only screen and (min-width: 960px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-.menu-toggle:focus, .menu-toggle:hover {
-  border-width: 0;
-  color: #07b4f3;
-  background-color: transparent;
-}
-
-.menu-toggle.activated:before {
-  content: "\f335";
-}
-
-.site-header .menu-toggle:before {
-  float: left;
-  position: relative;
-  top: 1px;
-  margin-right: 5px;
-  text-rendering: auto;
-}
-
-.sub-menu-toggle {
-  display: block;
-  visibility: visible;
-  float: right;
-  overflow: hidden;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 9px 10px;
-  border-width: 0;
-  color: #333;
-  background-color: transparent;
-  text-align: center;
-}
-
-@media only screen and (min-width: 960px) {
-  .sub-menu-toggle {
-    display: none;
-  }
-}
-
-.sub-menu-toggle:focus, .sub-menu-toggle:hover {
-  border-width: 0;
-  color: #07b4f3;
-  background-color: transparent;
-}
-
-.sub-menu-toggle:before {
-  display: inline-block;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-  text-rendering: auto;
-}
-
-.sub-menu .sub-menu-toggle {
-  padding: 12px 10px;
-}
-
-.sub-menu-toggle.activated:before {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-/* Header Menu
-   =================================== */
-.nav-primary {
-  clear: left;
-}
-
-@media only screen and (min-width: 960px) {
-  .nav-primary {
-    float: right;
-    clear: none;
-    width: auto;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .nav-primary .genesis-nav-menu a {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-/* Footer Menu
-   =================================== */
-.nav-secondary {
-  margin-top: 10px;
-}
-
-.nav-secondary .genesis-nav-menu {
-  line-height: 1.5;
-}
-
-.nav-secondary .menu-item {
-  display: inline-block;
-}
-
-.nav-secondary a {
-  margin-right: 10px;
-  margin-left: 10px;
-  padding: 0;
-}
-
-/* Primary menu
-   =================================== */
-.menu-primary a {
-  font-family: "Lato", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem !important;
-  font-weight: 700 !important;
-  font-size: 12px;
-}
-
-/* Login
-   =================================== */
-li.login a,
-li.logout a {
-  color: #07b4f3;
-  font-family: "Lato", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem !important;
-  font-weight: 700 !important;
-  font-size: 10px;
-  font-size: 1rem;
-  text-align: center;
-}
-
-li.login:hover,
-li.logout:hover {
-  background: #07b4f3;
-  border: 1px solid #07b4f3;
-}
-
-li.login a:hover,
-li.logout a:hover {
-  color: #fff;
-}
-
-.login-submit input {
-  font-family: "Lato", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem !important;
-  font-weight: 700 !important;
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
-/* adjust lost pw link in login modal */
-div.remodal a {
-  display: block;
-  margin-top: 110px;
-}
-
-/* Intranet menu for logged in users
-   =================================== */
-body.error404 nav.nav-intranet {
-  display: none;
-}
-
-nav.nav-intranet {
-  background: #042f4c;
-}
-
-ul.intranet {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 1140px;
-  font-size: 15px;
-  font-size: 1.5rem;
-  padding-left: 80px;
-}
-
-ul.intranet li {
-  padding: 0 15px;
-}
-
-ul.intranet li a {
-  color: #fff;
-  font-family: "Lato", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem !important;
-  font-weight: 700 !important;
-  font-size: 12px;
-  font-size: 1.2rem;
-  margin-top: 6px;
-}
-
-ul.intranet li a:hover {
-  color: #07b4f3 !important;
-}
-
-/* ul.intranet li a:link { color: $blue !important; } */
-/* ul.intranet li a:visited { color: $blue !important; } */
-/* ul.intranet li a:active { color: $blue !important; } */
-/* ul.intranet :focus { color: $blue !important; } */
-.toggle,
-[id^="drop"] {
-  display: none;
-}
-
-/* ==========================================================================
-   Structure and Layout
-   ========================================================================== */
-/* Site Container
-   =================================== */
-.site-container {
-  word-wrap: break-word;
-  -webkit-animation: fadein 0.5s;
-  animation: fadein 0.5s;
-  background: #fff;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Site Inner
-   =================================== */
-.site-inner {
-  clear: both;
-  margin: 0 auto;
-  padding: 60px 30px 0;
-}
-
-@media only screen and (min-width: 960px) {
-  .site-inner {
-    max-width: 1140px;
-    margin-top: 0;
-  }
-}
-
-/* Sticky footer styles
-   =================================== */
-.site-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.site-inner {
-  flex: 1;
-  width: 100vw;
-}
-
-/* Content
-   =================================== */
-@media only screen and (min-width: 960px) {
-  .content {
-    float: left;
-    width: 65%;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .sidebar-content .content {
-    float: right;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .full-width-content .content,
-  .landing-page .content {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  /* Column Classes
-	--------------------------------------------- */
-  .five-sixths,
-  .four-sixths,
-  .one-fourth,
-  .one-half,
-  .one-sixth,
-  .one-third,
-  .three-fourths,
-  .three-sixths,
-  .two-fourths,
-  .two-sixths,
-  .two-thirds {
-    float: left;
-    margin-left: 2.564102564102564%;
-  }
-  .one-half,
-  .three-sixths,
-  .two-fourths {
-    width: 48.717948717948715%;
-  }
-  .one-third,
-  .two-sixths {
-    width: 31.623931623931625%;
-  }
-  .four-sixths,
-  .two-thirds {
-    width: 65.81196581196582%;
-  }
-  .one-fourth {
-    width: 23.076923076923077%;
-  }
-  .three-fourths {
-    width: 74.35897435897436%;
-  }
-  .one-sixth {
-    width: 14.52991452991453%;
-  }
-  .five-sixths {
-    width: 82.90598290598291%;
-  }
-  .first {
-    clear: both;
-    margin-left: 0;
-  }
-}
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-.sidebar {
-  font-size: 12px;
-  line-height: 1.5;
-  font-family: "Lato", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem !important;
-  font-weight: 700 !important;
-}
-
-@media only screen and (min-width: 960px) {
-  .sidebar {
-    float: right;
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .sidebar-content .sidebar {
-    float: left;
-  }
-}
-
-.sidebar .widget {
-  margin-bottom: 40px;
-}
-
-.sidebar p {
-  margin-bottom: 20px;
-}
-
-.menu-forskola-container {
-  padding: 20px 30px;
-}
-
-.menu-forskola-container a {
-  font-size: 18px;
-  font-size: 1.8rem;
 }
 
 /* ==========================================================================
