@@ -2346,7 +2346,6 @@ body.home .entry-content {
    =================================== */
 .nav-primary {
   clear: left;
-  width: 100%;
 }
 
 @media only screen and (min-width: 960px) {
@@ -2354,7 +2353,6 @@ body.home .entry-content {
     float: right;
     clear: none;
     width: auto;
-    padding-top: 15px;
   }
 }
 

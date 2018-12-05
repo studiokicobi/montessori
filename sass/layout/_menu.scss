@@ -286,13 +286,13 @@
 
 .nav-primary {
   clear: left;
-  width: 100%;
+  // width: 100%;
 
   @media only screen and (min-width: $standard-screen-width) {
     float: right;
     clear: none;
     width: auto;
-    padding-top: 15px;
+    // padding-top: 15px;
   }
 
   .genesis-nav-menu a {
