@@ -83,10 +83,6 @@
 # Print Styles
 */
 
-/*
-...
-*/
-
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
@@ -100,8 +96,7 @@
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/common-classes",
-  "layout/content-area", "layout/menu", "layout/structure", "layout/sidebar",
-  "layout/media";
+  "layout/content-area", "layout/menu", "layout/structure", "layout/sidebar";
 
 // 5. Components
 @import "components/widgets", "components/plugins";
@@ -109,5 +104,8 @@
 // 6. Page-specific styles
 @import "pages/home";
 
-// 7. Themes
+// 7. Import @media rules
+@import "layout/media";
+
+// 8. Themes
 @import "themes/print";
