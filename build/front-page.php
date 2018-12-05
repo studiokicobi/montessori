@@ -54,7 +54,7 @@ function acf_loop()
 <?php if (have_rows('meny')) : ?>
 
 <div class="matsedel">
-	<h3>Veckans matsedel</h3>
+	<h3><?php the_field( 'meny_rubrik' ); ?></h3>
 	<ul>
 	<?php while (have_rows('meny')) : the_row(); ?>
 		<li class="dag"><h4>MÅNDAG</h4><?php the_sub_field('mandag'); ?></li>
