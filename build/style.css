@@ -2802,7 +2802,7 @@ p.position {
   padding-top: 3rem;
 }
 
-div.wpcf7 .wpcf7-recaptcha iframe {
+.wpcf7-recaptcha {
   margin-bottom: 2rem !important;
 }
 
