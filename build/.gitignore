@@ -19,3 +19,8 @@ wp-content/plugins/hello.php
 
 config.codekit3
 .DS_Store
+
+modules/
+partials/
+build/modules/
+build/partials/
