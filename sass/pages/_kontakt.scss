@@ -33,8 +33,10 @@
   padding-top: 3rem;
 }
 
-.wpcf7 {
-  iframe {
-    margin-bottom: 2rem;
+div.wpcf7 {
+  .wpcf7-recaptcha {
+    iframe {
+      margin-bottom: 2rem !important;
+    }
   }
 }

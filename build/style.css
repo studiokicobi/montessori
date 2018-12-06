@@ -2445,6 +2445,368 @@ body.home article {
 }
 
 /* ==========================================================================
+   Intranät sidor
+   ========================================================================== */
+/* Intranät > Member Profile page
+   =================================== */
+label {
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+select {
+  margin: 50px;
+  width: 250px;
+  padding: 5px 45px 5px 10px !important;
+  height: 50px !important;
+  border-radius: 0;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #000;
+  background: url("images/noun_down_1920917.png") 98%/5% no-repeat #fff;
+}
+
+select::-ms-expand {
+  display: none;
+  /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0) {
+  select {
+    background: none\9;
+    padding: 5px\9;
+  }
+}
+
+.acf-input select option {
+  padding-left: 10px;
+}
+
+.acf-field input[type="text"],
+.acf-field input[type="password"],
+.acf-field input[type="number"],
+.acf-field input[type="search"],
+.acf-field input[type="email"],
+.acf-field input[type="url"],
+.acf-field textarea {
+  border: 1px solid #ddd;
+  padding: 25px 10px;
+}
+
+.acf-fields > .acf-field {
+  position: relative;
+  margin: 0;
+  padding: 15px 0;
+  border: 0;
+}
+
+.acf-field .acf-label {
+  vertical-align: top;
+  margin: 0 0 5px;
+}
+
+.acf-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.acf-fields {
+  position: relative;
+}
+
+.user-profile-select {
+  max-width: 300px;
+}
+
+.user-profile-select input {
+  background-color: #f0f0f0 !important;
+}
+
+/* Intranät > Medlemmar & uppdrag sida
+   =================================== */
+div.table-wrapper {
+  overflow-x: auto;
+}
+
+table.medlemmar-table th {
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+table.medlemmar-table td {
+  vertical-align: top !important;
+}
+
+/* Intranät > Medlemslista
+   =================================== */
+dl {
+  padding: 0.5em;
+  line-height: 1.5;
+}
+
+dl dt {
+  float: left;
+  clear: left;
+  width: 200px;
+  text-align: left;
+  font-family: "klinic_slabbold", serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  background: #fff;
+}
+
+dl dd {
+  margin: 0 0 0 210px;
+  padding: 0 0 0.5em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+dl.list-heading dd::after {
+  content: "Tel. & e-post";
+}
+
+.parent {
+  min-width: 250px;
+  display: inline-block;
+}
+
+a.email-link {
+  position: absolute;
+  left: 290px;
+}
+
+a.email-link, a.tel-link {
+  font-size: 0;
+  color: #333;
+}
+
+a.email-link:hover, a.tel-link:hover {
+  color: #07b4f3;
+}
+
+a.email-link::before, a.tel-link::before {
+  visibility: visible;
+  padding-top: 4px;
+}
+
+dl.list-heading {
+  border-bottom: 2px solid #eee;
+  font-family: "Lato", sans-serif !important;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
+dl.list-heading dd,
+dl.list-heading dt {
+  padding-bottom: 0.1rem;
+  font-family: "Lato", sans-serif !important;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.child-plus {
+  padding-left: 0.5rem;
+}
+
+.child-plus-plus {
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 620px) {
+  dl {
+    padding: 0;
+  }
+  dl.list-heading {
+    display: none;
+  }
+  dt {
+    float: none;
+    margin-top: 5px;
+  }
+  dd {
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .parent {
+    min-width: 0;
+  }
+  a.email-link {
+    position: relative;
+    left: auto;
+  }
+}
+
+/* Intranät > Styrelsen
+   =================================== */
+p.position {
+  font-size: 21px;
+  font-size: 2.1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+/* Intranät > Städning
+   =================================== */
+.booking_form_div,
+.date_available,
+.hasDatepick,
+.wpdevbk form,
+.wpdevbk p {
+  font-family: "Lato", sans-serif !important;
+}
+
+.booking_form_div p {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0 !important;
+}
+
+.booking_form_div input[type="text"],
+.booking_form_div textarea {
+  font-family: "klinic_slabbook", serif;
+}
+
+.datepick-inline {
+  border: 0 !important;
+  box-shadow: 0 0 0 0 !important;
+  border-radius: !important;
+}
+
+.booking_form input[type="button"],
+.booking_form input[type="submit"] {
+  transition: all 0.2s ease-in-out;
+  background-color: #07b4f3;
+  border: 0;
+  color: #fff;
+  width: auto;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: normal;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+}
+
+.booking_form input[type="button"]:focus, .booking_form input[type="button"]:hover,
+.booking_form input[type="submit"]:focus,
+.booking_form input[type="submit"]:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.booking_form input[type="button"].small,
+.booking_form input[type="submit"].small {
+  padding: 8px 16px;
+}
+
+.booking_form_div input[type="text"],
+.booking_form_div select,
+.booking_form_div textarea {
+  border-color: #ddd !important;
+  border-radius: 0 !important;
+}
+
+.booking_form_div input[type="text"] {
+  height: auto !important;
+  padding: 15px 10px !important;
+}
+
+.wpdevbk input,
+.wpdevbk textarea {
+  box-shadow: 0 0 0 0 !important;
+}
+
+.booking_form input[type="text"],
+.booking_form textarea {
+  width: 100% !important;
+}
+
+.datepick-inline .date2approve,
+.datepick-inline .date_available,
+.datepick-inline .date_available.datepick-unselectable {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.datepick-inline .date_available a {
+  font-family: "Lato", sans-serif !important;
+  text-shadow: 0 !important;
+}
+
+.booking_form input[type="button"] {
+  margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Kontakt page
+   ========================================================================== */
+.wpcf7-submit {
+  font-family: "Lato", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem !important;
+  font-weight: 700 !important;
+  border-radius: 2px;
+  padding: 15px 25px !important;
+  margin-top: 12px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 40vh;
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.form-rubrik {
+  border-top: 2px solid #eee;
+  margin-top: 3rem;
+  padding-top: 3rem;
+}
+
+div.wpcf7 .wpcf7-recaptcha iframe {
+  margin-bottom: 2rem !important;
+}
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 /* ==========================================================================
