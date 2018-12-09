@@ -2505,7 +2505,7 @@ select::-ms-expand {
   position: relative;
   margin: 0;
   padding: 15px 0;
-  border: 0;
+  border: 0 !important;
 }
 
 .acf-field .acf-label {
