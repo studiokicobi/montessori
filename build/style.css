@@ -2624,7 +2624,9 @@ table.medlemmar-table td {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: normal;
-  line-height: 1.5 !important;
+  word-break: normal;
+  word-wrap: normal;
+  overflow-wrap: normal;
 }
 
 .members__row--heading-links {
@@ -2687,7 +2689,6 @@ table.medlemmar-table td {
   .members__row--item {
     font-size: 14px;
     font-size: 1.4rem;
-    width: 33%;
   }
 }
 
@@ -2705,6 +2706,12 @@ table.medlemmar-table td {
     width: 12px !important;
     height: 12px !important;
     font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .members__row--item {
+    width: 70px;
   }
 }
 
