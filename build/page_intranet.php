@@ -27,14 +27,14 @@ if (!is_user_logged_in()) {
 
 <?php // Intranät start page
 if (is_page(856)) {
-  if ( ! empty($_GET['user']) ) :
-	   $user_id = ( is_numeric($_GET['user']) ? 'user_' . $_GET['user'] : 'new_user' );
-	    acf_form([
-		      'field_groups' => [ 2558 ],
-		        'post_id'      => $user_id,
-	         ]);
-  endif;
-// Close Intranät start page page
+
+   global $display_name , $user_email;
+      get_currentuserinfo();
+      echo '<br />' . 'Din e-post adress är ' . $user_email; '. '
+
+  echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
+
+  // Close Intranät start page page
 } ?>
 
 
