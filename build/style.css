@@ -330,7 +330,7 @@ body {
   background-color: #fff;
   font-family: "klinic_slabbook", serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.625;
 }
 
@@ -382,8 +382,8 @@ hr {
 
 b,
 strong {
-  font-weight: 700;
-  font-family: "klinic_slabbold", serif;
+  font-weight: normal;
+  font-family: "klinic_slabmedium", serif;
 }
 
 blockquote,
@@ -423,7 +423,7 @@ h5,
 h6 {
   margin: 0 0 10px;
   font-family: "klinic_slabmedium", serif;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.2;
 }
 
@@ -556,7 +556,7 @@ textarea {
   color: #333;
   background-color: #fff;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 input:focus,
@@ -591,7 +591,7 @@ input[type="submit"],
   width: auto;
   padding: 15px 30px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -634,7 +634,7 @@ input[type="button"] {
   color: #fff;
   background-color: #07b4f3;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -656,7 +656,7 @@ input[type="reset"] {
   color: #fff;
   background-color: #07b4f3;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -678,7 +678,7 @@ input[type="submit"] {
   color: #fff;
   background-color: #07b4f3;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -701,7 +701,7 @@ input[type="submit"].small {
   color: #fff;
   background-color: #07b4f3;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -773,7 +773,7 @@ td:first-child {
 
 th {
   padding: 0 6px;
-  font-weight: 400;
+  font-weight: normal;
   text-align: left;
 }
 
@@ -809,7 +809,7 @@ th:first-child {
   background: #fff;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   font-size: 1em;
-  font-weight: 700;
+  font-weight: normal;
   text-decoration: none;
 }
 
@@ -1142,7 +1142,7 @@ th:first-child {
   font-size: 13px;
   margin-bottom: 5px;
   font-family: "Lato", sans-serif !important;
-  font-weight: 700;
+  font-weight: normal;
   color: #474e5d;
 }
 
@@ -1187,7 +1187,7 @@ th:first-child {
 .author-box-title {
   margin-bottom: 10px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .entry-title {
@@ -1213,7 +1213,7 @@ th:first-child {
 .widget-title {
   margin-bottom: 20px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 /* WordPress
@@ -1274,7 +1274,7 @@ img.alignright,
 .wp-caption-text {
   margin: 0;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -1356,7 +1356,7 @@ img.alignright,
 .entry-content .caption {
   margin-top: -20px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -1417,7 +1417,7 @@ body.home .entry-content {
   color: #333;
   background-color: #f5f5f5;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: normal;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1471,7 +1471,7 @@ body.home .entry-content {
 
 @media only screen and (min-width: 960px) {
   .genesis-nav-menu > .menu-bold > a {
-    font-weight: 700;
+    font-weight: normal;
   }
 }
 
@@ -1483,7 +1483,7 @@ body.home .entry-content {
     border-radius: 3px;
     color: #fff;
     background-color: #333;
-    font-weight: 700;
+    font-weight: normal;
   }
 }
 
@@ -1501,7 +1501,7 @@ body.home .entry-content {
   outline-offset: -1px;
   color: #07b4f3;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: normal;
   text-decoration: none;
 }
 
@@ -2396,7 +2396,7 @@ a.cta:hover {
   font-size: 14px;
   font-size: 1.4rem;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: center;
   margin: 0 -20px 10px;
   padding: 15px 0;
@@ -2611,7 +2611,7 @@ dl.list-heading {
   font-family: "Lato", sans-serif !important;
   font-size: 14px;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: normal;
   padding-bottom: 0 !important;
   line-height: 1 !important;
 }
@@ -2622,7 +2622,7 @@ dl.list-heading dt {
   font-family: "Lato", sans-serif !important;
   font-size: 14px;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .child-plus {
@@ -2706,7 +2706,7 @@ p.position {
   width: auto;
   padding: 15px 30px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: normal;
   white-space: normal;
   text-decoration: none;
   cursor: pointer;
@@ -3097,7 +3097,7 @@ p.position {
     font-size: 190px;
     font-size: 19rem;
     font-family: "Lato", sans-serif !important;
-    font-weight: 700;
+    font-weight: normal;
   }
   body.error404 .content h2 {
     font-size: 46px;
