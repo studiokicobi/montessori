@@ -420,7 +420,7 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
 
-add_action( 'genesis_entry_content', 'mont_list_child_pages', 5 );
+add_action( 'genesis_before_sidebar_widget_area', 'mont_list_child_pages', 5 );
 /**
  * Add a list of child pages right before the post content in Genesis.
  *
