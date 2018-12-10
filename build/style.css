@@ -2105,13 +2105,14 @@ ul.subpage_nav > li {
   position: relative;
   z-index: 2;
   cursor: pointer;
+  font-family: "Lato", sans-serif !important;
 }
 
 [data-tooltip]:before, [data-tooltip]:after {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 500ms;
+  transition: opacity 200ms;
 }
 
 [data-tooltip]:before {

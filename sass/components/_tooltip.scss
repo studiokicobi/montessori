@@ -9,6 +9,7 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
+  font-family: $sans;
 
   // Hide the tooltip content by default
   &:before,
@@ -17,7 +18,7 @@
     opacity: 0;
     pointer-events: none;
     // for animation
-    transition: opacity 500ms;
+    transition: opacity 200ms;
   }
 
   // Position tooltip above the element
