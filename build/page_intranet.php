@@ -27,16 +27,12 @@ if (!is_user_logged_in()) {
 
 <?php // Intranät start page
 if (is_page(856)) {
-
+  // Get current user email
   $current_user = wp_get_current_user();
-  echo 'User email: ' . $current_user->user_email . '<br />';
+  echo '<p>Din e-postadress är ' . $current_user->user_email . ' <a href="mailto:webmaster@skargardensmontessori.se">Kontakt webbgruppen</a> om du behöver ändra adressen.</p>' ;
 
-
-  // global $display_name , $user_email;
-  //    wp_get_current_user();
-  //    echo '<br />' . 'Din e-post adress är ' . $user_email; '. ';
-
-  echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
+  // Show member profile form
+echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 
   // Close Intranät start page page
 } ?>
