@@ -1666,7 +1666,7 @@ body.home .entry-content {
 .site-header .menu-toggle:before {
   float: left;
   position: relative;
-  top: 1px;
+  top: 0;
   margin-right: 5px;
   text-rendering: auto;
 }
@@ -2756,8 +2756,8 @@ table.medlemmar-table td {
   .members__row--item-parents {
     width: 35%;
   }
-  .dashicons,
-  .dashicons-before:before {
+  a.tooltip span.dashicons,
+  a.tooltip span.dashicons-before:before {
     width: 12px !important;
     height: 12px !important;
     font-size: 12px !important;
