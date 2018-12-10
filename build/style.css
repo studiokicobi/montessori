@@ -2668,6 +2668,34 @@ table.medlemslista td.parents, table.medlemslista td.links {
   padding-left: 1rem;
 }
 
+@media only screen and (max-width: 620px) {
+  .medlemslista th {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .medlemslista td {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .medlemslista th {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+  .medlemslista td {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .dashicons,
+  .dashicons-before:before {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 16px !important;
+  }
+}
+
 /* Intranät > Styrelsen
    =================================== */
 p.position {

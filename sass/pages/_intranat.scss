@@ -162,9 +162,31 @@ table.medlemslista {
 }
 
 @media only screen and (max-width: 620px) {
+  .medlemslista {
+    th {
+      @include font-size(12px);
+    }
+    td {
+      @include font-size(14px);
+    }
+  }
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 450px) {
+  .medlemslista {
+    th {
+      @include font-size(10px);
+    }
+    td {
+      @include font-size(12px);
+    }
+  }
+  .dashicons,
+  .dashicons-before:before {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 16px !important;
+  }
 }
 
 /* Intranät > Styrelsen
