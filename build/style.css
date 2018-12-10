@@ -2647,6 +2647,10 @@ table.medlemmar-table td {
   font-family: "klinic_slabbook", serif;
 }
 
+.members__row--item-tel-link {
+  margin-right: 10px;
+}
+
 .members__row--item-email-link, .members__row--item-tel-link {
   font-size: 0;
   color: #333;
@@ -2866,7 +2870,8 @@ p.position {
     font-size: 12px !important;
     font-size: 1.2rem !important;
   }
-  li.login a, li.logout a {
+  li.login a,
+  li.logout a {
     text-align: left;
     letter-spacing: 0;
   }
@@ -2874,7 +2879,8 @@ p.position {
     background: transparent;
     border: 0;
   }
-  li.login a:hover, li.logout a:hover {
+  li.login a:hover,
+  li.logout a:hover {
     color: inherit;
   }
   /* Structure */
@@ -2895,7 +2901,7 @@ p.position {
   h1 {
     font-size: 28px;
     font-size: 2.8rem;
-    margin: 5px 0 0 0 !important;
+    margin: 5px 0 30px 0 !important;
   }
   h2 {
     font-size: 22px;
@@ -3017,7 +3023,7 @@ p.position {
     opacity: 0;
     padding-left: 0;
     position: absolute;
-    transition: opacity .4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
   }
   nav.genesis-nav-menu ul.sub-menu li.menu-item a {
@@ -3361,7 +3367,7 @@ p.position {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
   }
-  [id^=drop]:checked + ul.intranet {
+  [id^="drop"]:checked + ul.intranet {
     max-height: 1000px;
     transition: all 0.2s ease-in-out;
     margin-bottom: 1.5rem;

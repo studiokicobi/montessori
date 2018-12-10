@@ -140,6 +140,10 @@ table.medlemmar-table {
         font-family: $base-font;
       }
 
+      &-tel-link {
+        margin-right: 10px;
+      }
+
       &-email-link,
       &-tel-link {
         font-size: 0;

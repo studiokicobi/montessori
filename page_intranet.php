@@ -46,10 +46,10 @@ if (is_page(867)) {
 ?>
 		<table class="members">
       <tbody>
-        <tr class="members__row--heading">
-          <th class="members__row--heading-children">Barn</th>
-          <th class="members__row--heading-parents">Föräldrar</th>
-          <th class="members__row--heading-links">Tel. & E-post</th>
+        <tr class="members__row">
+          <th class="members__row--heading members__row--heading-children">Barn</th>
+          <th class="members__row--heading members__row--heading-parents">Föräldrar</th>
+          <th class="members__row--heading members__row--heading-links">Tel. & E-post</th>
         </tr>
 
     <?php while (have_rows('medlemslista')) : the_row();
@@ -87,7 +87,7 @@ if (is_page(867)) {
     $child_3 = get_sub_field('barn_3');
 
     // Print Child's name
-    echo '<td class="members__row--item-children">';
+    echo '<td class="members__row--item members__row--item-children">';
       if ($child_1) : echo $child_1;
         endif;
       if ($child_2) : echo '<br />' . '<span class="members__row--item-child-plus">' . $child_2 . '</span>';
@@ -96,7 +96,7 @@ if (is_page(867)) {
         endif;
     echo '</td>';
 
-    echo '<td class="members__row--item-parents">';
+    echo '<td class="members__row--item members__row--item-parents">';
       // Parent 1 name
       if ($first_name_1) : echo '<span class="members__row--item-parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
         endif;
@@ -108,7 +108,7 @@ if (is_page(867)) {
         endif;
     echo '</td>';
 
-    echo '<td class="members__row--item-links">';
+    echo '<td class="members__row--item members__row--item-links">';
       // If parent 2 name exists, print tel + email links
       if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
         endif;
