@@ -1,87 +1,88 @@
-
 /* ==========================================================================
    Common Classes
    ========================================================================== */
-
 
 /* Avatar
    =================================== */
 
 .avatar {
-	float: left;
-	border-radius: 50%;
+  float: left;
+  border-radius: 50%;
 
-	.author-box &,
-	.alignleft & {
-		margin-right: 20px;
-	}
+  .author-box &,
+  .alignleft & {
+    margin-right: 20px;
+  }
 
-	.alignright & {
-		margin-left: 20px;
-	}
+  .alignright & {
+    margin-left: 20px;
+  }
 
-	.comment & {
-		margin: 0 15px 20px 0;
-	}
+  .comment & {
+    margin: 0 15px 20px 0;
+  }
 }
 
 /* Genesis
    =================================== */
 
 .after-entry {
-	margin-bottom: 40px;
-	padding: 20px 30px;
-	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
+  margin-bottom: 40px;
+  padding: 20px 30px;
+  box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
 
-	@media only screen and (min-width: $standard-screen-width) {
-		margin-bottom: 60px;
-		padding: 40px 60px;
-	}
+  @media only screen and (min-width: $standard-screen-width) {
+    margin-bottom: 60px;
+    padding: 40px 60px;
+  }
 
-	.widget:last-of-type {
-		margin-bottom: 0;
-	}
+  .widget:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .breadcrumb {
-	font-size: $breadcrumb--font-size;
-	margin-bottom: 5px;
-	font-family: $sans;
-	font-weight: $font-weight--bold;
-	color: $blue-grey;
+  font-size: $breadcrumb--font-size;
+  margin-bottom: 5px;
+  font-family: $sans;
+  font-weight: $font-weight--bold;
+  color: $blue-grey;
 }
 
-.breadcrumb span:nth-child(even) { color: rgba(0, 0, 0, 0.3); }
+.breadcrumb span:nth-child(even) {
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .archive-description p:last-child,
-
-.author-box p:last-child { margin-bottom: 0; }
+.author-box p:last-child {
+  margin-bottom: 0;
+}
 
 /* Search Form
    =================================== */
 
 .search-form {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .entry-content .search-form {
-	width: 50%;
-	margin-bottom: 40px;
+  width: 50%;
+  margin-bottom: 40px;
 }
 
 .post-password-form input[type="submit"],
 .search-form input[type="submit"] {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .widget_search input[type="submit"] {
-	clip: rect(0, 0, 0, 0);
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 /* Titles
@@ -89,106 +90,110 @@
 
 .archive-title,
 .author-box-title {
-	margin-bottom: 10px;
-	font-size: $archive-author-box__entry-title--font-size;
-	font-weight: $font-weight--bold;
+  margin-bottom: 10px;
+  font-size: $archive-author-box__entry-title--font-size;
+  font-weight: $font-weight--bold;
 }
 
 .entry-title {
-	margin-bottom: 10px;
-	font-size: $entry-title--font-size;
+  margin-bottom: 30px;
+  font-size: $entry-title--font-size;
 
-	a {
-		color: $dark-grey;
-		text-decoration: none;
-	}
+  a {
+    color: $dark-grey;
+    text-decoration: none;
+  }
 
-	a:focus,
-	a:hover {
-		color: $entry-title__link--font-color;
-	}
+  a:focus,
+  a:hover {
+    color: $entry-title__link--font-color;
+  }
 }
 
 .sidebar .widget-title a {
-	color: $sidebar__widget-title--font-color;
-	text-decoration: none;
+  color: $sidebar__widget-title--font-color;
+  text-decoration: none;
 }
 
 .widget-title {
-	margin-bottom: 20px;
-	font-size: $widget-title--font-size;
-	font-weight: $font-weight--bold;
+  margin-bottom: 20px;
+  font-size: $widget-title--font-size;
+  font-weight: $font-weight--bold;
 }
 
 /* WordPress
    =================================== */
 
-.aligncenter { text-align: center; }
+.aligncenter {
+  text-align: center;
+}
 
 a.aligncenter img {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 a.alignnone {
-	display: inline-block;
+  display: inline-block;
 }
 
 .alignleft {
-	float: left;
-	text-align: left;
+  float: left;
+  text-align: left;
 }
 
 .alignright {
-	float: right;
-	text-align: right;
+  float: right;
+  text-align: right;
 }
 
 a.alignleft,
 a.alignnone,
 a.alignright {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 img.centered,
 .aligncenter {
-	display: block;
-	margin: 0 auto 30px;
+  display: block;
+  margin: 0 auto 30px;
 }
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 20px 20px 0;
+  margin: 0 20px 20px 0;
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 20px 20px;
+  margin: 0 0 20px 20px;
 }
 
 .gallery-caption,
 .wp-caption-text {
-	margin: 0;
-	font-size: $entry-content__caption--font-size;
-	font-weight: $font-weight--bold;
-	text-align: center;
+  margin: 0;
+  font-size: $entry-content__caption--font-size;
+  font-weight: $font-weight--bold;
+  text-align: center;
 }
 
 .entry-content p.wp-caption-text {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .entry-content .wp-audio-shortcode,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
-	margin: 0 0 30px;
+  margin: 0 0 30px;
 }
 
-.post-edit-link { display: none; } /* hide edit links in admin view */
+.post-edit-link {
+  display: none;
+} /* hide edit links in admin view */
