@@ -39,7 +39,7 @@
 // Base styles for the tooltip's directional arrow
 [data-tooltip]:before {
   z-index: 1001;
-  border: 6px solid transparent;
+  border: 7px solid transparent;
   background: transparent;
   content: "";
 }
@@ -66,7 +66,7 @@
 
 .tooltip:before {
   margin-left: 0;
-  margin-right: -10px;
+  margin-right: -14px;
   margin-bottom: 0;
   border-top-color: transparent;
   border-left-color: $dark-grey;
@@ -76,7 +76,7 @@
 .tooltip:hover:after,
 .tooltip:focus:before,
 .tooltip:focus:after {
-  transform: translateX(-10px);
+  transform: translateX(-14px);
 }
 
 // Move directional arrows down a bit
