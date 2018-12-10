@@ -2104,6 +2104,8 @@ ul.subpage_nav > li {
 [data-tooltip] {
   position: relative;
   cursor: pointer;
+  text-align: center;
+  font-family: "Lato", sans-serif !important;
 }
 
 [data-tooltip]:before,
@@ -2141,8 +2143,9 @@ ul.subpage_nav > li {
 [data-tooltip]:after {
   z-index: 1000;
   padding: 8px;
-  width: 160px;
+  width: 200px;
   background-color: #333;
+  border-radius: 3px;
   color: #fff;
   content: attr(data-tooltip);
   font-size: 12px;
@@ -2174,7 +2177,7 @@ ul.subpage_nav > li {
 }
 
 .tooltip:before {
-  top: 3px;
+  top: 7px;
 }
 
 .tooltip:after {
