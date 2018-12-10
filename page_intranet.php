@@ -95,7 +95,7 @@ if (is_page(867)) {
 
     echo '</dt>';
 
-    echo '<dd>';
+    echo '<dd class="parents">';
     // Parent 1 name
     if ($first_name_1) : echo '<span class="parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
     endif;

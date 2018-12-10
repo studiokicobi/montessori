@@ -2555,7 +2555,7 @@ table.medlemmar-table td {
 /* Intranät > Medlemslista
    =================================== */
 dl {
-  padding: 0.5em;
+  padding: 0;
   line-height: 1.5;
 }
 
@@ -2576,6 +2576,12 @@ dl dd {
   font-size: 18px;
   font-size: 1.8rem;
   position: relative;
+}
+
+dl dd.parents {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
 dl.list-heading dd::after {

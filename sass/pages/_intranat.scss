@@ -100,7 +100,7 @@ table.medlemmar-table {
    =================================== */
 
 dl {
-  padding: 0.5em;
+  padding: 0;
   line-height: 1.5;
 
   dt {
@@ -118,6 +118,12 @@ dl {
     padding: 0 0 0.5em;
     @include font-size(18px);
     position: relative;
+
+    &.parents {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $border-color;
+    }
   }
 }
 
