@@ -189,9 +189,13 @@ dl.list-heading {
 @media only screen and (max-width: 620px) {
   dl {
     &.list-heading {
-      display: none;
+      dd {
+        &::after {
+          display: none;
+        }
+        padding: 0;
+      }
     }
-    padding: 0;
   }
 
   dt {
@@ -200,7 +204,7 @@ dl.list-heading {
   }
 
   dd {
-    background: $lightest-grey;
+    //background: $lightest-grey;
     margin: 0;
     padding: 0 0 0 0.5rem;
   }

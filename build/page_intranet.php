@@ -47,11 +47,11 @@ if (is_page(867)) {
 		<dl class="medlemslista list-heading">
         	<dt>Barn</dt>
         	<dd><span class="parent">Föräldrar</span></dd>
-        </dl>
+    </dl>
 
-        <dl class="medlemslista">
+    <dl class="medlemslista">
 
-    	<?php while (have_rows('medlemslista')) : the_row();
+    <?php while (have_rows('medlemslista')) : the_row();
 
     // Parent 1
     // Retrieve array for parent 1 and store the keys

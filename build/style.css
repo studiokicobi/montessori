@@ -2696,10 +2696,10 @@ dl.list-heading dt {
 }
 
 @media only screen and (max-width: 620px) {
-  dl {
+  dl.list-heading dd {
     padding: 0;
   }
-  dl.list-heading {
+  dl.list-heading dd::after {
     display: none;
   }
   dt {
@@ -2707,7 +2707,6 @@ dl.list-heading dt {
     margin-top: 5px;
   }
   dd {
-    background: #f5f5f5;
     margin: 0;
     padding: 0 0 0 0.5rem;
   }
