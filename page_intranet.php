@@ -110,17 +110,17 @@ if (is_page(867)) {
 
     echo '<td class="members__row--item members__row--item-links">';
       // If parent 2 name exists, print tel + email links
-      if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
+      if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . ' class="tooltip-left">' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
         endif;
-      if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
+      if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . ' class="tooltip-left">' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
         endif;
       // If parent 2 exists, add line break
       if ($first_name_2) : echo '<br />';
         endif;
       // If parent 2 name exists, print tel + email links
-      if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
+      if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . ' class="tooltip-left">' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
         endif;
-      if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
+      if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . ' class="tooltip-left">' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
         endif;
     echo '</td>';
     echo '</tr>';

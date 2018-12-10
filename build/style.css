@@ -2152,6 +2152,29 @@ ul.subpage_nav > li {
   opacity: 1;
 }
 
+.tooltip-left:before,
+.tooltip-left:after {
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+}
+
+.tooltip-left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #333;
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+  -webkit-transform: translateX(-12px);
+          transform: translateX(-12px);
+}
+
 /* ==========================================================================
    Plugins
    ========================================================================== */
