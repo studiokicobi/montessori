@@ -2696,19 +2696,8 @@ dl.list-heading dt {
 }
 
 @media only screen and (max-width: 620px) {
-  dl.list-heading dd {
-    padding: 0;
-  }
   dl.list-heading dd::after {
     display: none;
-  }
-  dt {
-    float: none;
-    margin-top: 5px;
-  }
-  dd {
-    margin: 0;
-    padding: 0 0 0 0.5rem;
   }
 }
 
