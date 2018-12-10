@@ -2632,6 +2632,7 @@ table.medlemslista td.parents, table.medlemslista td.links {
   margin-bottom: 1.5rem 0;
   padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
+  font-family: "klinic_slabbook", serif;
 }
 
 .tel-link {
