@@ -2135,7 +2135,7 @@ ul.subpage_nav > li {
 
 [data-tooltip]:before {
   z-index: 1001;
-  border: 7px solid transparent;
+  border: 6px solid transparent;
   background: transparent;
   content: "";
 }
@@ -2162,7 +2162,7 @@ ul.subpage_nav > li {
 
 .tooltip:before {
   margin-left: 0;
-  margin-right: -14px;
+  margin-right: -10px;
   margin-bottom: 0;
   border-top-color: transparent;
   border-left-color: #333;
@@ -2172,8 +2172,8 @@ ul.subpage_nav > li {
 .tooltip:hover:after,
 .tooltip:focus:before,
 .tooltip:focus:after {
-  -webkit-transform: translateX(-14px);
-          transform: translateX(-14px);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 .tooltip:before {
