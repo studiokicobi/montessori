@@ -2632,7 +2632,7 @@ dl dd {
 dl dd.parents {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 dl.list-heading dd::after {
