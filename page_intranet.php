@@ -32,7 +32,7 @@ if (is_page(856)) {
       get_currentuserinfo();
       echo '<br />' . 'Din e-post adress är ' . $user_email; '. ';
 
-  echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
+  //echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 
   // Close Intranät start page page
 } ?>
