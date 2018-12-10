@@ -28,11 +28,15 @@ if (!is_user_logged_in()) {
 <?php // Intranät start page
 if (is_page(856)) {
 
-   global $display_name , $user_email;
-      get_currentuserinfo();
-      echo '<br />' . 'Din e-post adress är ' . $user_email; '. ';
+  $current_user = wp_get_current_user();
+  echo 'User email: ' . $current_user->user_email . '<br />';
 
-  //echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
+
+  // global $display_name , $user_email;
+  //    wp_get_current_user();
+  //    echo '<br />' . 'Din e-post adress är ' . $user_email; '. ';
+
+  echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 
   // Close Intranät start page page
 } ?>
