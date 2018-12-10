@@ -371,17 +371,17 @@ function my_acf_save_post($post_id)
     }
 
     if ($_POST['post_id'] != 'new') {
-        $email = $_POST['acf']['field_5bc6468892b94'];
+        $emailField = $_POST['acf']['field_5bc6468892b94'];
         $wp_user_id = str_replace("user_", "", $post_id);
 
-        if (isset($email)) {
-            if (email_exists($email)) {
+        if (isset($emailField)) {
+            if (email_exists($emailField)) {
                 // Email exists, do not update value.
                 update_field('field_5bc6468892b94', get_the_author_meta('user_email', $wp_user_id), $post_id);
             } else {
                 $args = array(
                         'ID'         => $wp_user_id,
-                        'user_email' => esc_attr($email)
+                        'user_email' => esc_attr($emailField)
                     );
                 wp_update_user($args);
             }
@@ -391,7 +391,7 @@ function my_acf_save_post($post_id)
     // return the ID
     return $post_id;
 }
-    add_action('acf/save_post', 'my_acf_save_post', 10);
+    add_action('acf/save_post', 'my_acf_save_post', 20);
 
 
 /**
