@@ -112,9 +112,13 @@ table.medlemslista {
     line-height: 1.5 !important;
   }
 
+  tr {
+    border: 0;
+  }
+
   td {
     &.barn {
-      font-family: $base-font-bold;
+      font-family: $base-font-medium;
       border: 0;
     }
 
