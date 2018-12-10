@@ -120,8 +120,8 @@ dl {
     position: relative;
 
     &.parents {
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
       border-bottom: 1px solid $light-grey;
     }
   }
@@ -163,11 +163,11 @@ dl.list-heading dd::after {
 }
 
 dl.list-heading {
-  border-bottom: 2px solid $lighter-grey;
+  border-bottom: 1px solid $light-grey;
   font-family: $sans;
   @include font-size(14px);
   font-weight: $font-weight--bold;
-  padding-bottom: 0 !important;
+  padding-bottom: 0.5rem !important;
   line-height: 1 !important;
 
   dd,
