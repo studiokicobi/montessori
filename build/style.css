@@ -2669,7 +2669,9 @@ table.medlemslista td.parents, table.medlemslista td.links {
 }
 
 @media only screen and (max-width: 620px) {
-  .medlemslista th {
+  .medlemslista th.barn-heading,
+  .medlemslista th.parents-heading,
+  .medlemslista th.links-heading {
     font-size: 12px;
     font-size: 1.2rem;
   }

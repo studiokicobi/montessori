@@ -163,7 +163,9 @@ table.medlemslista {
 
 @media only screen and (max-width: 620px) {
   .medlemslista {
-    th {
+    th.barn-heading,
+    th.parents-heading,
+    th.links-heading {
       @include font-size(12px);
     }
     td {
