@@ -12,7 +12,7 @@ label {
 }
 
 select {
-  margin: 50px;
+  margin: 0 0 20px 0;
   width: 250px;
   padding: 5px 45px 5px 10px !important;
   height: 50px !important;
@@ -47,7 +47,7 @@ select::-ms-expand {
 .acf-field input[type="url"],
 .acf-field textarea {
   border: $border-width $border-style $light-grey;
-  padding: 25px 10px;
+  // padding: 25px 10px;
 }
 
 .acf-fields > .acf-field {
