@@ -104,10 +104,6 @@ table.medlemslista {
   line-height: 1.5;
 
   th {
-    //float: left;
-    //clear: left;
-    //width: 200px;
-    //background: $white;
     text-align: left;
     border-bottom: 1px solid $light-grey;
     font-family: $sans;
@@ -127,6 +123,7 @@ table.medlemslista {
       margin-bottom: 1.5rem 0;
       padding-bottom: 1.5rem 0;
       border-bottom: 1px solid $light-grey;
+      font-family: $base-font;
     }
   }
 }
