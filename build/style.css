@@ -2623,17 +2623,7 @@ table.medlemslista .list-heading {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: normal;
-  padding-bottom: 0.5rem !important;
-  line-height: 1 !important;
-}
-
-table.medlemslista .list-heading dd,
-table.medlemslista .list-heading dt {
-  padding-bottom: 0.1rem;
-  font-family: "Lato", sans-serif !important;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: normal;
+  line-height: 1.5 !important;
 }
 
 table.medlemslista td {
@@ -2648,8 +2638,9 @@ table.medlemslista td.parents, table.medlemslista td.links {
   border-bottom: 1px solid #ddd;
 }
 
-.parent {
-  display: inline-block;
+.barn {
+  font-family: "klinic_slabmedium", serif;
+  border: 0;
 }
 
 .tel-link {
