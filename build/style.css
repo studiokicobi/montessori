@@ -2700,6 +2700,7 @@ table.medlemmar-table td {
   .members__row--item {
     font-size: 12px;
     font-size: 1.2rem;
+    width: 70px;
   }
   .dashicons,
   .dashicons-before:before {
