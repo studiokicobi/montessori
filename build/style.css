@@ -2608,12 +2608,16 @@ table.medlemmar-table td {
 
 /* Intranät > Medlemslista
    =================================== */
-table.medlemslista {
+.members {
   padding: 0;
   line-height: 1.5;
 }
 
-table.medlemslista th {
+.members__row {
+  border: 0;
+}
+
+.members__row--heading {
   text-align: left;
   border-bottom: 1px solid #ddd;
   font-family: "Lato", sans-serif !important;
@@ -2623,78 +2627,71 @@ table.medlemslista th {
   line-height: 1.5 !important;
 }
 
-table.medlemslista tr {
-  border: 0;
-}
-
-table.medlemslista td.barn {
+.members__row--item-children {
   font-family: "klinic_slabmedium", serif;
   border: 0;
 }
 
-table.medlemslista td.parents, table.medlemslista td.links {
+.members__row--item-child-plus {
+  padding-left: 0.5rem;
+}
+
+.members__row--item-child-plus-plus {
+  padding-left: 1rem;
+}
+
+.members__row--item-parents, .members__row--item-links {
   margin-bottom: 1.5rem 0;
   padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
   font-family: "klinic_slabbook", serif;
 }
 
-.tel-link {
-  margin-right: 15px;
-}
-
-.email-link,
-.tel-link {
+.members__row--item-email-link, .members__row--item-tel-link {
   font-size: 0;
   color: #333;
 }
 
-.email-link:hover,
-.tel-link:hover {
+.members__row--item-email-link:hover, .members__row--item-tel-link:hover {
   color: #07b4f3;
 }
 
-.email-link::before,
-.tel-link::before {
+.members__row--item-email-link::before, .members__row--item-tel-link::before {
   visibility: visible;
   padding-top: 4px;
 }
 
-.child-plus {
-  padding-left: 0.5rem;
-}
-
-.child-plus-plus {
-  padding-left: 1rem;
-}
-
 @media only screen and (max-width: 620px) {
-  .medlemslista th.barn-heading,
-  .medlemslista th.parents-heading,
-  .medlemslista th.links-heading {
+  .members__row--heading {
     font-size: 12px;
     font-size: 1.2rem;
   }
-  .medlemslista td {
+  .members__row--item {
     font-size: 14px;
     font-size: 1.4rem;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .medlemslista th {
+  .members__row--heading {
     font-size: 10px;
     font-size: 1rem;
   }
-  .medlemslista td {
+  .members__row--item {
     font-size: 12px;
     font-size: 1.2rem;
   }
   .dashicons,
   .dashicons-before:before {
-    width: 16px !important;
-    height: 16px !important;
-    font-size: 16px !important;
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .members__row--heading-links {
+    display: none;
   }
 }
 

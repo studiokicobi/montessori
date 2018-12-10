@@ -41,33 +41,20 @@ echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 <?php
 // Page = Medlemslista
 
-// <table>
-//   <tr>
-//     <th>Firstname</th>
-//     <th>Lastname</th>
-//     <th>Age</th>
-//   </tr>
-//   <tr>
-//     <td>Eve</td>
-//     <td>Jackson</td>
-//     <td>94</td>
-//   </tr>
-// </table>
-
-
 if (is_page(867)) {
     if (have_rows('medlemslista')) :
 ?>
-		<table class="medlemslista">
-      <tr class="list-heading">
-        <th class="barn barn-heading">Barn</th>
-        <th class="parents parent-heading">Föräldrar</th>
-        <th class="links links-heading">Tel. & E-post</th>
-      </tr>
+		<table class="members">
+      <tbody>
+        <tr class="members__row--heading">
+          <th class="members__row--heading-children">Barn</th>
+          <th class="members__row--heading-parents">Föräldrar</th>
+          <th class="members__row--heading-links">Tel. & E-post</th>
+        </tr>
 
     <?php while (have_rows('medlemslista')) : the_row();
 
-    echo '<tr class="member-data-row">';
+    echo '<tr class="members__row">';
     // Parent 1
     // Retrieve array for parent 1 and store the keys
     // var_dump( $foralder_1_array );
@@ -100,46 +87,47 @@ if (is_page(867)) {
     $child_3 = get_sub_field('barn_3');
 
     // Print Child's name
-    echo '<td class="barn">';
+    echo '<td class="members__row--item-children">';
       if ($child_1) : echo $child_1;
         endif;
-      if ($child_2) : echo '<br />' . '<span class="child-plus">' . $child_2 . '</span>';
+      if ($child_2) : echo '<br />' . '<span class="members__row--item-child-plus">' . $child_2 . '</span>';
         endif;
-      if ($child_3) : echo '<br />' . '<span class="child-plus-plus">' . $child_3 . '</span>';
+      if ($child_3) : echo '<br />' . '<span class="members__row--item-child-plus-plus">' . $child_3 . '</span>';
         endif;
     echo '</td>';
 
-    echo '<td class="parents">';
+    echo '<td class="members__row--item-parents">';
       // Parent 1 name
-      if ($first_name_1) : echo '<span class="parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
+      if ($first_name_1) : echo '<span class="members__row--item-parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
         endif;
       // If parent 2 exists, add line break
       if ($first_name_2) : echo '<br />';
         endif;
       // If parent 2 exists, print parent 2 name
-      if ($first_name_2) : echo '<span class="parent">' . $first_name_2 . ' ' . $last_name_2 . '</span>';
+      if ($first_name_2) : echo '<span class="members__row--item-parent">' . $first_name_2 . ' ' . $last_name_2 . '</span>';
         endif;
     echo '</td>';
 
-    echo '<td class="links">';
+    echo '<td class="members__row--item-links">';
       // If parent 2 name exists, print tel + email links
-      if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
+      if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
         endif;
-      if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
+      if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
         endif;
       // If parent 2 exists, add line break
       if ($first_name_2) : echo '<br />';
         endif;
       // If parent 2 name exists, print tel + email links
-      if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
+      if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="members__row--item-tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
         endif;
-      if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
+      if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="members__row--item-email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
         endif;
     echo '</td>';
     echo '</tr>';
 
     endwhile;
 
+    echo '</tbody>';
     echo '</table>';
 
     else :

@@ -99,95 +99,109 @@ table.medlemmar-table {
 /* Intranät > Medlemslista
    =================================== */
 
-table.medlemslista {
+// table styles
+.members {
   padding: 0;
   line-height: 1.5;
 
-  th {
-    text-align: left;
-    border-bottom: 1px solid $light-grey;
-    font-family: $sans;
-    @include font-size(14px);
-    font-weight: $font-weight--bold;
-    line-height: 1.5 !important;
-  }
-
-  tr {
+  &__row {
     border: 0;
-  }
 
-  td {
-    &.barn {
-      font-family: $base-font-medium;
-      border: 0;
-    }
-
-    &.parents,
-    &.links {
-      margin-bottom: 1.5rem 0;
-      padding-bottom: 1.5rem 0;
+    &--heading {
+      text-align: left;
       border-bottom: 1px solid $light-grey;
-      font-family: $base-font;
+      font-family: $sans;
+      @include font-size(14px);
+      font-weight: $font-weight--bold;
+      line-height: 1.5 !important;
+    }
+
+    &--item {
+      &-children {
+        font-family: $base-font-medium;
+        border: 0;
+      }
+
+      // child number 2
+      &-child-plus {
+        padding-left: 0.5rem;
+      }
+
+      // child number 3
+      &-child-plus-plus {
+        padding-left: 1rem;
+      }
+
+      &-parents,
+      &-links {
+        margin-bottom: 1.5rem 0;
+        padding-bottom: 1.5rem 0;
+        border-bottom: 1px solid $light-grey;
+        font-family: $base-font;
+      }
+
+      &-email-link,
+      &-tel-link {
+        font-size: 0;
+        color: $dark-grey;
+      }
+
+      &-email-link:hover,
+      &-tel-link:hover {
+        color: $blue;
+      }
+
+      &-email-link::before,
+      &-tel-link::before {
+        visibility: visible;
+        padding-top: 4px;
+      }
     }
   }
-}
-
-.tel-link {
-  margin-right: 15px;
-}
-
-.email-link,
-.tel-link {
-  font-size: 0;
-  color: $dark-grey;
-}
-
-.email-link:hover,
-.tel-link:hover {
-  color: $blue;
-}
-
-.email-link::before,
-.tel-link::before {
-  visibility: visible;
-  padding-top: 4px;
-}
-
-.child-plus {
-  padding-left: 0.5rem;
-}
-
-.child-plus-plus {
-  padding-left: 1rem;
 }
 
 @media only screen and (max-width: 620px) {
-  .medlemslista {
-    th.barn-heading,
-    th.parents-heading,
-    th.links-heading {
-      @include font-size(12px);
-    }
-    td {
-      @include font-size(14px);
+  .members {
+    &__row {
+      &--heading {
+        @include font-size(12px);
+      }
+      &--item {
+        @include font-size(14px);
+      }
     }
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .medlemslista {
-    th {
-      @include font-size(10px);
-    }
-    td {
-      @include font-size(12px);
+  .members {
+    &__row {
+      &--heading {
+        @include font-size(10px);
+      }
+      &--item {
+        @include font-size(12px);
+      }
     }
   }
+
   .dashicons,
   .dashicons-before:before {
-    width: 16px !important;
-    height: 16px !important;
-    font-size: 16px !important;
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .members {
+    &__row {
+      &--heading {
+        &-links {
+          display: none;
+        }
+      }
+    }
   }
 }
 
