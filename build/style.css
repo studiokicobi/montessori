@@ -2670,9 +2670,22 @@ table.medlemmar-table td {
     font-size: 12px;
     font-size: 1.2rem;
   }
+  .members__row--heading-links {
+    text-align: right;
+  }
   .members__row--item {
     font-size: 14px;
     font-size: 1.4rem;
+    width: 33%;
+  }
+  .members__row--item-links {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .members__row--heading .members__row-links {
+    display: none;
   }
 }
 

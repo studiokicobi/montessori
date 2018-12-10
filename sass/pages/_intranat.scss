@@ -169,9 +169,28 @@ table.medlemmar-table {
     &__row {
       &--heading {
         @include font-size(12px);
+
+        &-links {
+          text-align: right;
+        }
       }
       &--item {
         @include font-size(14px);
+        width: 33%;
+
+        &-links {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .members {
+    &__row {
+      &--heading &-links {
+        display: none;
       }
     }
   }
