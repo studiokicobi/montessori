@@ -2711,8 +2711,23 @@ table.medlemmar-table td {
 }
 
 @media only screen and (max-width: 400px) {
+  .members__row--heading {
+    font-size: 9px;
+    font-size: 0.9rem;
+  }
   .members__row--item {
+    font-size: 11px;
+    font-size: 1.1rem;
     width: 70px;
+  }
+  .members__row--item-parents {
+    width: 35%;
+  }
+  .dashicons,
+  .dashicons-before:before {
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
   }
 }
 
