@@ -30,7 +30,7 @@ if (is_page(856)) {
 
    global $display_name , $user_email;
       get_currentuserinfo();
-      echo '<br />' . 'Din e-post adress är ' . $user_email; '. '
+      echo '<br />' . 'Din e-post adress är ' . $user_email; '. ';
 
   echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 
