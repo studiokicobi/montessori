@@ -356,7 +356,7 @@ function add_acf_form_head()
 
 add_action('get_header', 'add_acf_form_head', 7);
 
-// FIXTHIS: Save email correctly
+// Save email correctly
 
 function my_acf_save_post($post_id)
 {
@@ -371,18 +371,17 @@ function my_acf_save_post($post_id)
     }
 
     if ($_POST['post_id'] != 'new') {
-        $emailField = $_POST['acf']['field_XXXXXXXXXXXXX'];
+        $email = $_POST['acf']['field_5bc6468892b94'];
         $wp_user_id = str_replace("user_", "", $post_id);
 
-        if (isset($emailField)) {
-            if (email_exists($emailField)) {
+        if (isset($email)) {
+            if (email_exists($email)) {
                 // Email exists, do not update value.
-                // Maybe output a warning.
-                update_field('field_XXXXXXXXXXXXX', get_the_author_meta('user_email', $wp_user_id), $post_id);
+                update_field('field_5bc6468892b94', get_the_author_meta('user_email', $wp_user_id), $post_id);
             } else {
                 $args = array(
                         'ID'         => $wp_user_id,
-                        'user_email' => esc_attr($emailField)
+                        'user_email' => esc_attr($email)
                     );
                 wp_update_user($args);
             }
@@ -392,7 +391,7 @@ function my_acf_save_post($post_id)
     // return the ID
     return $post_id;
 }
-    add_action('acf/save_post', 'my_acf_save_post', 20);
+    add_action('acf/save_post', 'my_acf_save_post', 10);
 
 
 /**
