@@ -65,10 +65,9 @@ if (is_page(867)) {
         <th class="Xlinks">Tel. & E-post</th>
       </tr>
 
-    <tr">
-
     <?php while (have_rows('medlemslista')) : the_row();
 
+    echo '<tr>';
     // Parent 1
     // Retrieve array for parent 1 and store the keys
     // var_dump( $foralder_1_array );
@@ -137,10 +136,10 @@ if (is_page(867)) {
       if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="Xemail-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
         endif;
     echo '</td>';
+    echo '</tr>';
 
     endwhile;
 
-    echo '</tr>';
     echo '</table>';
 
     else :
