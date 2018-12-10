@@ -114,6 +114,10 @@ table.medlemmar-table {
       @include font-size(14px);
       font-weight: $font-weight--bold;
       line-height: 1.5 !important;
+
+      &-links {
+        text-align: right;
+      }
     }
 
     &--item {
@@ -138,6 +142,10 @@ table.medlemmar-table {
         padding-bottom: 1.5rem 0;
         border-bottom: 1px solid $light-grey;
         font-family: $base-font;
+      }
+
+      &-links {
+        text-align: right;
       }
 
       &-tel-link {
@@ -169,18 +177,10 @@ table.medlemmar-table {
     &__row {
       &--heading {
         @include font-size(12px);
-
-        &-links {
-          text-align: right;
-        }
       }
       &--item {
         @include font-size(14px);
         width: 33%;
-
-        &-links {
-          text-align: right;
-        }
       }
     }
   }
@@ -223,7 +223,7 @@ table.medlemmar-table {
     &__row {
       &--heading {
         &-links {
-          display: none;
+          //display: none;
         }
       }
     }

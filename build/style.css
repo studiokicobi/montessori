@@ -2627,6 +2627,10 @@ table.medlemmar-table td {
   line-height: 1.5 !important;
 }
 
+.members__row--heading-links {
+  text-align: right;
+}
+
 .members__row--item-children {
   font-family: "klinic_slabmedium", serif;
   border: 0;
@@ -2645,6 +2649,10 @@ table.medlemmar-table td {
   padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
   font-family: "klinic_slabbook", serif;
+}
+
+.members__row--item-links {
+  text-align: right;
 }
 
 .members__row--item-tel-link {
@@ -2670,16 +2678,10 @@ table.medlemmar-table td {
     font-size: 12px;
     font-size: 1.2rem;
   }
-  .members__row--heading-links {
-    text-align: right;
-  }
   .members__row--item {
     font-size: 14px;
     font-size: 1.4rem;
     width: 33%;
-  }
-  .members__row--item-links {
-    text-align: right;
   }
 }
 
@@ -2697,12 +2699,6 @@ table.medlemmar-table td {
     width: 12px !important;
     height: 12px !important;
     font-size: 12px !important;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .members__row--heading-links {
-    display: none;
   }
 }
 
