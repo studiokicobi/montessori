@@ -103,7 +103,8 @@ if (is_page(867)) {
     // If parent 2 name exists, print tel + email links
     if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
     endif;
-    if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</a>';
+    //if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</a>';
+    if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
     endif;
 
     // If parent 2, add break
@@ -115,9 +116,11 @@ if (is_page(867)) {
     endif;
 
     // If parent 2 name exists, print tel + email links
-    if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '" class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</a>';
+    //if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '" class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</a>';
+    if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
     endif;
-    if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</a>';
+    // if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</a>';
+    if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
     endif;
 
     echo '</dd>';
