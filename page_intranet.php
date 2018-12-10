@@ -27,13 +27,14 @@ if (!is_user_logged_in()) {
 
 <?php // Intranät start page
 if (is_page(856)) {
-  if ( ! empty($_GET['user']) ) :
-	   $user_id = ( is_numeric($_GET['user']) ? 'user_' . $_GET['user'] : 'new_user' );
-	    acf_form([
-		      'field_groups' => [ 2558 ],
-		        'post_id'      => $user_id,
-	         ]);
-  endif;
+  echo 'test';
+//  if ( ! empty($_GET['user']) ) :
+//	   $user_id = ( is_numeric($_GET['user']) ? 'user_' . $_GET['user'] : 'new_user' );
+//	    acf_form([
+//		      'field_groups' => [ 2558 ],
+//		        'post_id'      => $user_id,
+//	         ]);
+//  endif;
 endif;
 // Close Intranät start page page
 } ?>
