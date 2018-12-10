@@ -2631,6 +2631,12 @@ table.medlemmar-table td {
   text-align: right;
 }
 
+.members__row--item {
+  word-break: normal;
+  word-wrap: normal;
+  overflow-wrap: normal;
+}
+
 .members__row--item-children {
   font-family: "klinic_slabmedium", serif;
   border: 0;
@@ -2685,7 +2691,7 @@ table.medlemmar-table td {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   .members__row--heading {
     font-size: 10px;
     font-size: 1rem;
