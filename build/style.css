@@ -2152,14 +2152,63 @@ ul.subpage_nav > li {
   opacity: 1;
 }
 
-.tooltip-left:before,
-.tooltip-left:after {
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #333;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.tooltip:before,
+.tooltip:after {
   right: 100%;
   bottom: 50%;
   left: auto;
 }
 
-.tooltip-left:before {
+.tooltip:before {
   margin-left: 0;
   margin-right: -12px;
   margin-bottom: 0;
@@ -2167,12 +2216,21 @@ ul.subpage_nav > li {
   border-left-color: #333;
 }
 
-.tooltip-left:hover:before,
-.tooltip-left:hover:after,
-.tooltip-left:focus:before,
-.tooltip-left:focus:after {
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
   -webkit-transform: translateX(-12px);
           transform: translateX(-12px);
+}
+
+.tooltip:before {
+  top: 3px;
+}
+
+.tooltip:after {
+  margin-left: 0;
+  margin-bottom: -16px;
 }
 
 /* ==========================================================================
