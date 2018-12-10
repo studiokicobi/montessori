@@ -215,10 +215,25 @@ table.medlemmar-table {
 @media only screen and (max-width: 400px) {
   .members {
     &__row {
+      &--heading {
+        @include font-size(9px);
+      }
       &--item {
+        @include font-size(11px);
         width: 70px;
+
+        &-parents {
+          width: 35%;
+        }
       }
     }
+  }
+
+  .dashicons,
+  .dashicons-before:before {
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
   }
 }
 
