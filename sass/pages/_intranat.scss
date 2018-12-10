@@ -199,6 +199,7 @@ table.medlemmar-table {
       }
       &--item {
         @include font-size(12px);
+        width: 70px;
       }
     }
   }
