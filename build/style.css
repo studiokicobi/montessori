@@ -2111,6 +2111,7 @@ ul.subpage_nav > li {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 500ms;
 }
 
 [data-tooltip]:before {
@@ -2119,7 +2120,7 @@ ul.subpage_nav > li {
   left: 50%;
   margin-bottom: 5px;
   margin-left: -100px;
-  padding: 7px;
+  padding: 10px;
   width: 20rem;
   border-radius: 3px;
   background-color: #333;
@@ -2127,6 +2128,7 @@ ul.subpage_nav > li {
   content: attr(data-tooltip);
   text-align: center;
   font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.2;
 }
 

@@ -16,6 +16,8 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    // for animation
+    transition: opacity 500ms;
   }
 
   // Position tooltip above the element
@@ -25,16 +27,14 @@
     left: 50%;
     margin-bottom: 5px;
     margin-left: -100px;
-    padding: 7px;
+    padding: 10px;
     width: 20rem;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: $dark-grey;
     color: $white;
     content: attr(data-tooltip);
     text-align: center;
-    font-size: 14px;
+    @include font-size(14px);
     line-height: 1.2;
   }
 
