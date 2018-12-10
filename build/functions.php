@@ -442,9 +442,6 @@ function mont_list_child_pages() {
 	}
 }
 
-add_shortcode('mont_childpages', 'mont_list_child_pages');
-
-
 
 
 /**
