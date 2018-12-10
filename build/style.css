@@ -2683,12 +2683,6 @@ table.medlemmar-table td {
   }
 }
 
-@media only screen and (max-width: 510px) {
-  .members__row--heading .members__row-links {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 450px) {
   .members__row--heading {
     font-size: 10px;

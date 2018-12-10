@@ -189,8 +189,10 @@ table.medlemmar-table {
 @media only screen and (max-width: 510px) {
   .members {
     &__row {
-      &--heading &-links {
-        display: none;
+      &--heading {
+        &-links {
+          //display: none;
+        }
       }
     }
   }
