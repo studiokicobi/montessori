@@ -401,22 +401,50 @@ function my_acf_save_post($post_id)
  *
  */
 
-function wpb_list_child_pages()
-{
-    global $post;
+// function wpb_list_child_pages()
+//{
+//    global $post;
+//
+//    if (is_page() && $post->post_parent) {
+//        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' .$post->post_parent . '&echo=0');
+//    } else {
+//        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0');
+//    }
+//    if ($childpages) {
+//        $string = '<ul class="subpage_nav">' . $childpages . '</ul>';
+//    }
+//    return $string;
+//}
 
-    if (is_page() && $post->post_parent) {
-        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' .$post->post_parent . '&echo=0');
-    } else {
-        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0');
-    }
-    if ($childpages) {
-        $string = '<ul class="subpage_nav">' . $childpages . '</ul>';
-    }
-    return $string;
+//add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+
+
+//add_action( 'genesis_entry_content', 'mont_list_child_pages', 5 );
+/**
+ * Add a list of child pages right before the post content in Genesis.
+ *
+ * @global object $post The current post object.
+ */
+
+function mont_list_child_pages() {
+	global $post; // Setup the global variable $post
+	if ( is_page() && $post->post_parent ) {
+		// Make sure we are on a page and that the page is a parent.
+		$children = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+	} else {
+		$children = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+	}
+	if ( $children ) {
+		echo '<ul class="subpage_nav">';
+			echo $children;
+		echo '</ul>';
+	}
 }
 
-add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+add_shortcode('mont_childpages', 'mont_list_child_pages');
+
+
 
 
 /**
