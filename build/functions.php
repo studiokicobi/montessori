@@ -253,6 +253,7 @@ remove_action('genesis_after_header', 'genesis_do_subnav');
 add_action('genesis_footer', 'genesis_do_subnav', 10);
 
 add_filter('wp_nav_menu_args', 'genesis_sample_secondary_menu_args');
+
 /**
  * Reduces secondary navigation menu to one level depth.
  *
@@ -520,3 +521,23 @@ $result = add_role(
         'publish_posts' => false,
     )
 );
+
+
+/**
+ * Create custom post type: Matsedel
+ *
+ */
+
+function create_post_type() {
+  register_post_type( 'matsedel',
+    array(
+      'labels' => array(
+        'name' => __( 'Matsedlar' ),
+        'singular_name' => __( 'Matsedel' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
