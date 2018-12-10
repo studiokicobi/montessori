@@ -2128,8 +2128,8 @@ ul.subpage_nav > li {
   color: #fff;
   content: attr(data-tooltip);
   text-align: center;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.2;
 }
 

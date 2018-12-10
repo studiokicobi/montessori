@@ -35,7 +35,7 @@
     color: $white;
     content: attr(data-tooltip);
     text-align: center;
-    @include font-size(14px);
+    @include font-size(12px);
     line-height: 1.2;
   }
 
