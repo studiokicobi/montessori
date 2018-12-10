@@ -8,6 +8,8 @@
 [data-tooltip] {
   position: relative;
   cursor: pointer;
+  text-align: center;
+  font-family: $sans;
 }
 
 // Base styles for the entire tooltip
@@ -46,8 +48,9 @@
 [data-tooltip]:after {
   z-index: 1000;
   padding: 8px;
-  width: 160px;
+  width: 200px;
   background-color: $dark-grey;
+  border-radius: 3px;
   color: $white;
   content: attr(data-tooltip);
   @include font-size(12px);
@@ -78,7 +81,7 @@
 
 // Move directional arrows down a bit
 .tooltip:before {
-  top: 3px;
+  top: 7px;
 }
 
 // Vertically center tooltip content
