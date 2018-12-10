@@ -99,7 +99,7 @@
   "layout/content-area", "layout/menu", "layout/structure", "layout/sidebar";
 
 // 5. Components
-@import "components/widgets", "components/plugins";
+@import "components/widgets", "components/tooltip", "components/plugins";
 
 // 6. Page-specific styles
 @import "pages/home";
