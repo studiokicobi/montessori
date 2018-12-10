@@ -2646,21 +2646,24 @@ dl.list-heading dd::after {
   display: inline-block;
 }
 
-a.email-link {
+.email-link {
   position: absolute;
   left: 290px;
 }
 
-a.email-link, a.tel-link {
+.email-link,
+.tel-link {
   font-size: 0;
   color: #333;
 }
 
-a.email-link:hover, a.tel-link:hover {
+.email-link:hover,
+.tel-link:hover {
   color: #07b4f3;
 }
 
-a.email-link::before, a.tel-link::before {
+.email-link::before,
+.tel-link::before {
   visibility: visible;
   padding-top: 4px;
 }

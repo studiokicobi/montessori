@@ -136,28 +136,26 @@ dl.list-heading dd::after {
   display: inline-block;
 }
 
-a {
-  &.email-link {
-    position: absolute;
-    left: 290px;
-  }
+.email-link {
+  position: absolute;
+  left: 290px;
+}
 
-  &.email-link,
-  &.tel-link {
-    font-size: 0;
-    color: $dark-grey;
-  }
+.email-link,
+.tel-link {
+  font-size: 0;
+  color: $dark-grey;
+}
 
-  &.email-link:hover,
-  &.tel-link:hover {
-    color: $blue;
-  }
+.email-link:hover,
+.tel-link:hover {
+  color: $blue;
+}
 
-  &.email-link::before,
-  &.tel-link::before {
-    visibility: visible;
-    padding-top: 4px;
-  }
+.email-link::before,
+.tel-link::before {
+  visibility: visible;
+  padding-top: 4px;
 }
 
 dl.list-heading {
