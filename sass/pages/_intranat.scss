@@ -136,9 +136,13 @@ dl.list-heading dd::after {
   display: inline-block;
 }
 
-.email-link {
-  position: absolute;
-  left: 290px;
+//.email-link {
+//  position: absolute;
+//  left: 290px;
+//}
+
+.tel-link {
+  margin-right: 15px;
 }
 
 .email-link,
