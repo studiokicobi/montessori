@@ -204,8 +204,8 @@ table.medlemmar-table {
     }
   }
 
-  .dashicons,
-  .dashicons-before:before {
+  a.tooltip span.dashicons,
+  a.tooltip span.dashicons-before:before {
     width: 12px !important;
     height: 12px !important;
     font-size: 12px !important;
@@ -227,13 +227,6 @@ table.medlemmar-table {
         }
       }
     }
-  }
-
-  a.tooltip span.dashicons,
-  a.tooltip span.dashicons-before:before {
-    width: 12px !important;
-    height: 12px !important;
-    font-size: 12px !important;
   }
 }
 

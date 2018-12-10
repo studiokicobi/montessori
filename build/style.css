@@ -2735,8 +2735,8 @@ table.medlemmar-table td {
     font-size: 1.2rem;
     width: 70px;
   }
-  .dashicons,
-  .dashicons-before:before {
+  a.tooltip span.dashicons,
+  a.tooltip span.dashicons-before:before {
     width: 12px !important;
     height: 12px !important;
     font-size: 12px !important;
@@ -2755,12 +2755,6 @@ table.medlemmar-table td {
   }
   .members__row--item-parents {
     width: 35%;
-  }
-  a.tooltip span.dashicons,
-  a.tooltip span.dashicons-before:before {
-    width: 12px !important;
-    height: 12px !important;
-    font-size: 12px !important;
   }
 }
 
