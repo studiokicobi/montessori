@@ -2613,11 +2613,8 @@ table.medlemslista {
   line-height: 1.5;
 }
 
-table.medlemslista .list-heading {
+table.medlemslista th {
   text-align: left;
-  font-family: "klinic_slabbold", serif;
-  font-size: 18px;
-  font-size: 1.8rem;
   border-bottom: 1px solid #ddd;
   font-family: "Lato", sans-serif !important;
   font-size: 14px;
@@ -2626,21 +2623,15 @@ table.medlemslista .list-heading {
   line-height: 1.5 !important;
 }
 
-table.medlemslista td {
-  font-size: 18px;
-  font-size: 1.8rem;
-  position: relative;
+table.medlemslista td .barn {
+  font-family: "klinic_slabbold", serif;
+  border: 0;
 }
 
 table.medlemslista td.parents, table.medlemslista td.links {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem 0;
+  padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
-}
-
-.barn {
-  font-family: "klinic_slabmedium", serif;
-  border: 0;
 }
 
 .tel-link {
@@ -2670,25 +2661,6 @@ table.medlemslista td.parents, table.medlemslista td.links {
 
 .child-plus-plus {
   padding-left: 1rem;
-}
-
-@media only screen and (max-width: 620px) {
-  dl.list-heading dd::after {
-    display: none;
-  }
-  .parent {
-    min-width: 0;
-  }
-}
-
-@media only screen and (max-width: 374px) {
-  .parent {
-    min-width: 0;
-  }
-  a.email-link {
-    position: relative;
-    left: auto;
-  }
 }
 
 /* Intranät > Styrelsen

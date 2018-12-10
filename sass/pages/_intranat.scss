@@ -103,14 +103,12 @@ table.medlemslista {
   padding: 0;
   line-height: 1.5;
 
-  .list-heading {
+  th {
     //float: left;
     //clear: left;
     //width: 200px;
     //background: $white;
     text-align: left;
-    font-family: $base-font-bold;
-    @include font-size(18px);
     border-bottom: 1px solid $light-grey;
     font-family: $sans;
     @include font-size(14px);
@@ -119,27 +117,18 @@ table.medlemslista {
   }
 
   td {
-    //margin: 0 0 0 210px;
-    //padding: 0 0 0.5em;
-    @include font-size(18px);
-    position: relative;
+    .barn {
+      font-family: $base-font-bold;
+      border: 0;
+    }
 
     &.parents,
     &.links {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem 0;
+      padding-bottom: 1.5rem 0;
       border-bottom: 1px solid $light-grey;
     }
   }
-}
-
-.barn {
-  font-family: $base-font-medium;
-  border: 0;
-}
-
-.parent {
-  // display: inline-block;
 }
 
 .tel-link {
@@ -172,41 +161,9 @@ table.medlemslista {
 }
 
 @media only screen and (max-width: 620px) {
-  dl {
-    &.list-heading {
-      dd {
-        &::after {
-          display: none;
-        }
-        //padding: 0;
-      }
-    }
-  }
-
-  .parent {
-    min-width: 0;
-  }
-  dt {
-    //float: none;
-    //margin-top: 5px;
-  }
-
-  dd {
-    //background: $lightest-grey;
-    //margin: 0;
-    //padding: 0 0 0 0.5rem;
-  }
 }
 
 @media only screen and (max-width: 374px) {
-  .parent {
-    min-width: 0;
-  }
-
-  a.email-link {
-    position: relative;
-    left: auto;
-  }
 }
 
 /* Intranät > Styrelsen

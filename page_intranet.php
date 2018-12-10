@@ -61,7 +61,7 @@ if (is_page(867)) {
 		<table class="medlemslista">
       <tr class="list-heading">
         <th class="barn barn-heading">Barn</th>
-        <th class="parent parent-heading">Föräldrar</th>
+        <th class="parents parent-heading">Föräldrar</th>
         <th class="links links-heading">Tel. & E-post</th>
       </tr>
 
