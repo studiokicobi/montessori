@@ -41,15 +41,31 @@ echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
 <?php
 // Page = Medlemslista
 
+// <table>
+//   <tr>
+//     <th>Firstname</th>
+//     <th>Lastname</th>
+//     <th>Age</th>
+//   </tr>
+//   <tr>
+//     <td>Eve</td>
+//     <td>Jackson</td>
+//     <td>94</td>
+//   </tr>
+// </table>
+
+
 if (is_page(867)) {
     if (have_rows('medlemslista')) :
 ?>
-		<dl class="medlemslista list-heading">
-        	<dt>Barn</dt>
-        	<dd><span class="parent">Föräldrar</span></dd>
-    </dl>
+		<table class="medlemslista">
+      <tr class="list-heading">
+        <th class="barn">Barn</th>
+        <th class="parent">Föräldrar</th>
+        <th class="links">Tel. & E-post</th>
+      </tr>
 
-    <dl class="medlemslista">
+    <tr">
 
     <?php while (have_rows('medlemslista')) : the_row();
 
@@ -85,49 +101,49 @@ if (is_page(867)) {
     $child_3 = get_sub_field('barn_3');
 
     // Print Child's name
-    echo '<dt class="barn">';
-    if ($child_1) : echo $child_1;
-    endif;
-    if ($child_2) : echo '<br>' . '<span class="child-plus">' . $child_2 . '</span>';
-    endif;
-    if ($child_3) : echo '<br>' . '<span class="child-plus-plus">' . $child_3 . '</span>';
-    endif;
+    echo '<td class="barn">';
+      if ($child_1) : echo $child_1;
+        endif;
+      if ($child_2) : echo '<br />' . '<span class="child-plus">' . $child_2 . '</span>';
+        endif;
+      if ($child_3) : echo '<br />' . '<span class="child-plus-plus">' . $child_3 . '</span>';
+        endif;
+    echo '</td>';
 
-    echo '</dt>';
+    echo '<td class="parents">';
+      // Parent 1 name
+      if ($first_name_1) : echo '<span class="parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
+        endif;
+      // If parent 2 exists, add line break
+      if ($first_name_2) : echo '<br />';
+        endif;
+      // If parent 2 exists, print parent 2 name
+      if ($first_name_2) : echo '<span class="parent">' . $first_name_2 . ' ' . $last_name_2 . '</span>';
+        endif;
+    echo '</td>';
 
-    echo '<dd class="parents">';
-    // Parent 1 name
-    if ($first_name_1) : echo '<span class="parent">' . $first_name_1 . ' ' . $last_name_1 . '</span>';
-    endif;
-
-    // If parent 2 name exists, print tel + email links
-    if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
-    endif;
-    //if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</a>';
-    if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
-    endif;
-
-    // If parent 2, add break
-    if ($first_name_2) : echo '<br>';
-    endif;
-
-    // If parent 2, print parent 2 name
-    if ($first_name_2) : echo '<span class="parent">' . $first_name_2 . ' ' . $last_name_2 . '</span>';
-    endif;
-
-    // If parent 2 name exists, print tel + email links
-    //if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '" class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</a>';
-    if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
-    endif;
-    // if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '" class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</a>';
-    if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
-    endif;
-
-    echo '</dd>';
+    echo '<td class="links">';
+      // If parent 2 name exists, print tel + email links
+      if ($first_name_1 && $tel_1) : echo '<a href="tel:' . $tel_1 . '"' . 'data-tooltip="' . $tel_1 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_1 . '</span>' . '</a>';
+        endif;
+      if ($first_name_1 && $email_1) : echo '<a href="mailto:' . $email_1 . '"' . 'data-tooltip="' . $email_1 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_1 . '</span>' . '</a>';
+        endif;
+      // If parent 2 exists, add line break
+      if ($first_name_2) : echo '<br />';
+        endif;
+      // If parent 2 name exists, print tel + email links
+      if ($first_name_2 && $tel_2) : echo '<a href="tel:' . $tel_2 . '"' . 'data-tooltip="' . $tel_2 . '"' . '>' . '<span class="tel-link dashicons-before dashicons-phone">' . $tel_2 . '</span>' . '</a>';
+        endif;
+      if ($first_name_2 && $email_2) : echo '<a href="mailto:' . $email_2 . '"' . 'data-tooltip="' . $email_2 . '"' . '>' . '<span class="email-link dashicons-before dashicons-email-alt">' . $email_2 . '</span>' . '</a>';
+        endif;
+    echo '</td>';
 
     endwhile;
 
-    echo '<dl>'; else :
+    echo '</tr>';
+    echo '</table>';
+
+    else :
         // no rows found
     endif;
 
@@ -142,38 +158,38 @@ if (is_page(890)) {
     // Get ACF meta value for activity group and echo user in the group
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Aktivitetsgruppen'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
 
 
     echo '<h2>Fadderfamiljen</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Fadderfamiljen'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
 
     echo '<h2>Hantverksgruppen</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Hantverksgruppen'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
 
     echo '<h2>Städmaterialansvarig</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Städmaterialansvarig'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
 
     echo '<h2>Städplaneringsansvarig</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Städplaneringsansvarig'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
 
     echo '<h2>Webbgruppen</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Webbgruppen'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->email) . '">' . esc_html($user->email) . '</a>' . '</p>';
     }
     // Close Aktivitetsgruppen page
 } ?>
@@ -193,7 +209,7 @@ if (is_page(859)) {
     // Get ACF meta value for activity group and echo user in the group
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Ordförande'));
     foreach ($mont_users as $user) {
-        echo '<p class="position">' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p class="position">' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('ordforande_beskrivning')):
@@ -203,7 +219,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Vice ordförande</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Vice ordförande'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('vice_ordforande_beskrivning')):
@@ -213,7 +229,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Sekreterare</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Sekreterare'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('sekreterare_beskrivning')):
@@ -223,7 +239,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Kassör</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Kassör'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('kassor_beskrivning')):
@@ -233,7 +249,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Personalansvarig</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Personalansvarig'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('personalansvarig_beskrivning')):
@@ -243,7 +259,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Suppleant 1</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Suppleant 1'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('suppleant_1_beskrivning')):
@@ -253,7 +269,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Suppleant 2</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Suppleant 2'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('suppleant_2_beskrivning')):
@@ -263,7 +279,7 @@ if (is_page(859)) {
     echo '<h2>Styrelse Suppleant 3</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Styrelse Suppleant 3'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('suppleant_3_beskrivning')):
@@ -273,7 +289,7 @@ if (is_page(859)) {
     echo '<h2>Lekmannarevisor</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Lekmannarevisor'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('lekmannarevisor_beskrivning')):
@@ -283,7 +299,7 @@ if (is_page(859)) {
     echo '<h2>Valberedning</h2>';
     $mont_users = get_users(array('orderby' => 'last_name', 'meta_key' => 'uppdrag', 'meta_value' => 'Valberedning'));
     foreach ($mont_users as $user) {
-        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br>Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br>' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
+        echo '<p>' . esc_html($user->first_name) . ' ' . esc_html($user->last_name) . '<br />Tel. ' . '<a href="tel:' . esc_html($user->telnr) . '">' . esc_html($user->telnr) . '</a>' . '<br />' . '<a href="mailto:' . esc_html($user->user_email) . '">' . esc_html($user->user_email) . '</a>' . '</p>';
     }
 
     if (get_field('valberedning')):

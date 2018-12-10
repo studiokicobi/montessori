@@ -2699,6 +2699,9 @@ dl.list-heading dt {
   dl.list-heading dd::after {
     display: none;
   }
+  .parent {
+    min-width: 0;
+  }
 }
 
 @media only screen and (max-width: 374px) {
