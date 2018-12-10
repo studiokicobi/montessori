@@ -2623,8 +2623,12 @@ table.medlemslista th {
   line-height: 1.5 !important;
 }
 
+table.medlemslista tr {
+  border: 0;
+}
+
 table.medlemslista td.barn {
-  font-family: "klinic_slabbold", serif;
+  font-family: "klinic_slabmedium", serif;
   border: 0;
 }
 
