@@ -29,7 +29,7 @@ if (!is_user_logged_in()) {
 if (is_page(856)) {
   // Get current user email
   $current_user = wp_get_current_user();
-  echo '<p>Din e-postadress är ' . $current_user->user_email . '.<br /><a href="mailto:webmaster@skargardensmontessori.se">Kontakta webbgruppen</a> om du behöver ändra adressen.</p>' ;
+  echo '<p>Din e-postadress är <em>' . $current_user->user_email . '</em>.<br /><a href="mailto:webmaster@skargardensmontessori.se">Kontakta webbgruppen</a> om du behöver ändra adressen.</p>' ;
 
   // Show member profile form
 echo do_shortcode( ' [frontend_member_form field_group="2558"] ' );
