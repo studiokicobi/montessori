@@ -2608,42 +2608,47 @@ table.medlemmar-table td {
 
 /* Intranät > Medlemslista
    =================================== */
-dl {
+table.medlemslista {
   padding: 0;
   line-height: 1.5;
 }
 
-dl dt {
-  float: left;
-  clear: left;
-  width: 200px;
+table.medlemslista .list-heading {
   text-align: left;
   font-family: "klinic_slabbold", serif;
   font-size: 18px;
   font-size: 1.8rem;
-  background: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: "Lato", sans-serif !important;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  padding-bottom: 0.5rem !important;
+  line-height: 1 !important;
 }
 
-dl dd {
-  margin: 0 0 0 210px;
-  padding: 0 0 0.5em;
+table.medlemslista .list-heading dd,
+table.medlemslista .list-heading dt {
+  padding-bottom: 0.1rem;
+  font-family: "Lato", sans-serif !important;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+table.medlemslista td {
   font-size: 18px;
   font-size: 1.8rem;
   position: relative;
 }
 
-dl dd.parents {
+table.medlemslista td.parents, table.medlemslista td.links {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #ddd;
 }
 
-dl.list-heading dd::after {
-  content: "Tel. & e-post";
-}
-
 .parent {
-  min-width: 250px;
   display: inline-block;
 }
 
@@ -2666,25 +2671,6 @@ dl.list-heading dd::after {
 .tel-link::before {
   visibility: visible;
   padding-top: 4px;
-}
-
-dl.list-heading {
-  border-bottom: 1px solid #ddd;
-  font-family: "Lato", sans-serif !important;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: normal;
-  padding-bottom: 0.5rem !important;
-  line-height: 1 !important;
-}
-
-dl.list-heading dd,
-dl.list-heading dt {
-  padding-bottom: 0.1rem;
-  font-family: "Lato", sans-serif !important;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: normal;
 }
 
 .child-plus {

@@ -99,27 +99,42 @@ table.medlemmar-table {
 /* Intranät > Medlemslista
    =================================== */
 
-dl {
+table.medlemslista {
   padding: 0;
   line-height: 1.5;
 
-  dt {
-    float: left;
-    clear: left;
-    width: 200px;
+  .list-heading {
+    //float: left;
+    //clear: left;
+    //width: 200px;
     text-align: left;
     font-family: $base-font-bold;
     @include font-size(18px);
-    background: $white;
+    //background: $white;
+    border-bottom: 1px solid $light-grey;
+    font-family: $sans;
+    @include font-size(14px);
+    font-weight: $font-weight--bold;
+    padding-bottom: 0.5rem !important;
+    line-height: 1 !important;
+
+    dd,
+    dt {
+      padding-bottom: 0.1rem;
+      font-family: $sans;
+      @include font-size(14px);
+      font-weight: $font-weight--bold;
+    }
   }
 
-  dd {
-    margin: 0 0 0 210px;
-    padding: 0 0 0.5em;
+  td {
+    //margin: 0 0 0 210px;
+    //padding: 0 0 0.5em;
     @include font-size(18px);
     position: relative;
 
-    &.parents {
+    &.parents,
+    &.links {
       margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid $light-grey;
@@ -127,19 +142,10 @@ dl {
   }
 }
 
-dl.list-heading dd::after {
-  content: "Tel. & e-post";
-}
-
 .parent {
-  min-width: 250px;
+  //min-width: 250px;
   display: inline-block;
 }
-
-//.email-link {
-//  position: absolute;
-//  left: 290px;
-//}
 
 .tel-link {
   margin-right: 15px;
@@ -160,23 +166,6 @@ dl.list-heading dd::after {
 .tel-link::before {
   visibility: visible;
   padding-top: 4px;
-}
-
-dl.list-heading {
-  border-bottom: 1px solid $light-grey;
-  font-family: $sans;
-  @include font-size(14px);
-  font-weight: $font-weight--bold;
-  padding-bottom: 0.5rem !important;
-  line-height: 1 !important;
-
-  dd,
-  dt {
-    padding-bottom: 0.1rem;
-    font-family: $sans;
-    @include font-size(14px);
-    font-weight: $font-weight--bold;
-  }
 }
 
 .child-plus {

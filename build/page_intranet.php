@@ -60,14 +60,14 @@ if (is_page(867)) {
 ?>
 		<table class="medlemslista">
       <tr class="list-heading">
-        <th class="barn">Barn</th>
-        <th class="parent">Föräldrar</th>
-        <th class="links">Tel. & E-post</th>
+        <th class="barn barn-heading">Barn</th>
+        <th class="parent parent-heading">Föräldrar</th>
+        <th class="links links-heading">Tel. & E-post</th>
       </tr>
 
     <?php while (have_rows('medlemslista')) : the_row();
 
-    echo '<tr>';
+    echo '<tr class="member-data-row">';
     // Parent 1
     // Retrieve array for parent 1 and store the keys
     // var_dump( $foralder_1_array );
