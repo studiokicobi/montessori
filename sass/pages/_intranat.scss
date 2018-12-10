@@ -107,24 +107,15 @@ table.medlemslista {
     //float: left;
     //clear: left;
     //width: 200px;
+    //background: $white;
     text-align: left;
     font-family: $base-font-bold;
     @include font-size(18px);
-    //background: $white;
     border-bottom: 1px solid $light-grey;
     font-family: $sans;
     @include font-size(14px);
     font-weight: $font-weight--bold;
-    padding-bottom: 0.5rem !important;
-    line-height: 1 !important;
-
-    dd,
-    dt {
-      padding-bottom: 0.1rem;
-      font-family: $sans;
-      @include font-size(14px);
-      font-weight: $font-weight--bold;
-    }
+    line-height: 1.5 !important;
   }
 
   td {
@@ -142,9 +133,13 @@ table.medlemslista {
   }
 }
 
+.barn {
+  font-family: $base-font-medium;
+  border: 0;
+}
+
 .parent {
-  //min-width: 250px;
-  display: inline-block;
+  // display: inline-block;
 }
 
 .tel-link {
