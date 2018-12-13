@@ -50,24 +50,52 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
+	<?php
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	wp_reset_postdata();
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	?>
+	
+	<?php
+	    query_posts(array(
+	        'post_type' => 'matsedel',
+	        'showposts' => 1
+	    ) );
+	?>
 
-<?php if (have_rows('meny')) : ?>
+	<?php while (have_posts()) : the_post(); ?>
 
-<div class="matsedel">
-	<h3><?php the_field( 'meny_rubrik' ); ?></h3>
-	<ul>
-	<?php while (have_rows('meny')) : the_row(); ?>
-		<li class="dag"><h4>MÅNDAG</h4><?php the_sub_field('mandag'); ?></li>
-		<li class="dag"><h4>TISDAG</h4><?php the_sub_field('tisdag'); ?></li>
-		<li class="dag"><h4>ONSDAG</h4><?php the_sub_field('onsdag'); ?></li>
-		<li class="dag"><h4>TORSDAG</h4><?php the_sub_field('torsdag'); ?></li>
-		<li class="dag"><h4>FREDAG</h4><?php the_sub_field('fredag'); ?></li>
-	<?php endwhile; ?>
-	</ul>
-</div>
+		<h3><?php the_title(); ?></h3>
 
-<?php endif; ?>
+		<ul>
 
+			<?php if ( have_rows( 'm-t' ) ) : ?>
+				<?php while ( have_rows( 'm-t' ) ) : the_row(); ?>
+
+					<li class="dag">
+						<h4><?php the_sub_field( 'veckodag' ); ?></h4>
+						<?php the_sub_field( 'lunch' ); ?>
+						<?php the_sub_field( 'mellanmal' ); ?>
+						<?php the_sub_field( 'mellanmal-annat' ); ?>
+					</li>
+
+				<?php endwhile; ?>
+
+			<?php else : ?>
+				<?php // no rows found ?>
+			<?php endif; ?>
+
+			<?php if ( have_rows( 'fredag' ) ) : ?>
+				<?php while ( have_rows( 'fredag' ) ) : the_row(); ?>
+					<li class="dag">
+						<h4>Fredag</h4>
+						<?php the_sub_field( 'lunch' ); ?>
+						<?php the_sub_field( 'mellanmal' ); ?>
+					</li>
+				<?php endwhile; ?>
+			<?php endif; ?>
+
+		</ul>
 
 <?php
 // ----------------------------------------
