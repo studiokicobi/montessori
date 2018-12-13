@@ -537,6 +537,7 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
+      'query_var' => true,
     )
   );
 }
