@@ -50,20 +50,10 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-	<?php
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	wp_reset_postdata();
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	?>
-	
-	<?php
-	    query_posts(array(
-	        'post_type' => 'matsedel',
-	        'showposts' => 1
-	    ) );
-	?>
 
-	<?php while (have_posts()) : the_post(); ?>
+	<?php
+	 $query = new WP_Query( array('post_type' => 'matsedel', 'posts_per_page' => 1 ) );
+	 while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<h3><?php the_title(); ?></h3>
 
@@ -96,6 +86,11 @@ function acf_loop()
 			<?php endif; ?>
 
 		</ul>
+
+
+	<?php endif; wp_reset_postdata(); ?>
+	<?php endwhile; ?>
+
 
 <?php
 // ----------------------------------------
