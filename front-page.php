@@ -50,7 +50,7 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-
+.
 	<?php
 		$args = array( 'post_type' => 'matsedel', 'posts_per_page' => 1 );
 		$the_query = new WP_Query( $args );
@@ -61,7 +61,6 @@ function acf_loop()
 		<h3><?php the_title(); ?></h3>
 
 		<ul>
-			*test
 			<?php if ( have_rows( 'm-t' ) ) : ?>
 				<?php while ( have_rows( 'm-t' ) ) : the_row(); ?>
 
@@ -88,7 +87,6 @@ function acf_loop()
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</ul>
-
 
 		<?php wp_reset_postdata(); ?>
 		<?php else:  ?>
