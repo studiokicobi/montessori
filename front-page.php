@@ -52,11 +52,13 @@ function acf_loop()
 
 
 	<?php
-	 $query = new WP_Query( array('post_type' => 'matsedel', 'posts_per_page' => 1 ) );
-	 while ( $query->have_posts() ) : $query->the_post(); ?>
+		$args = array( 'post_type' => 'matsedel', 'posts_per_page' => 1 );
+		$the_query = new WP_Query( $args );
+		?>
+		<?php if ( $the_query->have_posts() ) : ?>
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 		<h3><?php the_title(); ?></h3>
-	<?php endwhile; ?>
 
 		<ul>
 			*test
@@ -71,10 +73,10 @@ function acf_loop()
 					</li>
 
 				<?php endwhile; ?>
-
 			<?php else : ?>
 				<?php // no rows found ?>
 			<?php endif; ?>
+
 
 			<?php if ( have_rows( 'fredag' ) ) : ?>
 				<?php while ( have_rows( 'fredag' ) ) : the_row(); ?>
@@ -85,12 +87,13 @@ function acf_loop()
 					</li>
 				<?php endwhile; ?>
 			<?php endif; ?>
-
 		</ul>
 
 
-	<?php wp_reset_postdata(); ?>
-	<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+		<?php else:  ?>
+			<?php // no rows found ?>
+		<?php endif; ?>
 
 
 <?php
