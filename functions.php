@@ -545,6 +545,58 @@ add_action( 'init', 'create_post_type' );
 
 
 /**
+ * Create custom post type: Matsedel
+ *
+ */
+
+function matsedel_init() {
+  register_post_type( 'matsedel',
+    array(
+      'labels' => array(
+        'name' => __( 'Matsedlar' ),
+        'singular_name' => __( 'Matsedel' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'query_var' => true,
+    )
+  );
+}
+add_action( 'init', 'matsedel_init' );
+
+
+/**
+ * Create custom post type: Nyhetsbrev
+ *
+ */
+
+ function newsletter_init() {
+     $args = array(
+       'label' => 'Nyhetsbrev',
+         'public' => true,
+         'show_ui' => true,
+         'capability_type' => 'post',
+         'rewrite' => array('slug' => 'nyhetsbrev'),
+         'query_var' => true,
+         //'menu_icon' => 'dashicons-video-alt',
+         'supports' => array(
+             'title',
+             'editor',
+             'excerpt',
+             'trackbacks',
+             'custom-fields',
+             'comments',
+             'revisions',
+             'thumbnail',
+             'author',
+             'page-attributes',)
+         );
+     register_post_type( 'nyhetsbrev', $args );
+ }
+ add_action( 'init', 'newsletter_init' );
+
+
+/**
  * Remove menu items from WordPress dashboard
  *
  */
