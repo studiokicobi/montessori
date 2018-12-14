@@ -50,24 +50,60 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-
-<?php if (have_rows('meny')) : ?>
-
-<div class="matsedel">
-	<h3><?php the_field( 'meny_rubrik' ); ?></h3>
+	<div class="matsedel">
+	<h3>Matsedel v. 50</h3>
 	<ul>
-	<?php while (have_rows('meny')) : the_row(); ?>
-		<li class="dag"><h4>MÅNDAG</h4><?php the_sub_field('mandag'); ?></li>
-		<li class="dag"><h4>TISDAG</h4><?php the_sub_field('tisdag'); ?></li>
-		<li class="dag"><h4>ONSDAG</h4><?php the_sub_field('onsdag'); ?></li>
-		<li class="dag"><h4>TORSDAG</h4><?php the_sub_field('torsdag'); ?></li>
-		<li class="dag"><h4>FREDAG</h4><?php the_sub_field('fredag'); ?></li>
-	<?php endwhile; ?>
+		<li class="dag">
+			<h4>MÅNDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Köttkorv och potatismos, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Yoggi och smörgås
+			</p>
+		</li>
+
+		<li class="dag">
+			<h4>TISDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Fransk pastagratäng med kyckling, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Blodkorv och potatisplättar
+			</p>
+		</li>
+
+		<li class="dag">
+			<h4>ONSDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Stekt fisk och kokt potatis, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Mjölk o smörgås
+			</p>
+		</li>
+
+		<li class="dag">
+			<h4>TORSDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Broccolisoppa med nybakat ekobröd<br>
+				<strong>Mellanmål</strong><br>
+				Mjölk o smörgås
+			</p>
+		</li>
+
+		<li class="dag">
+			<h4>FREDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Matsäck – till lunch serveras mjölk och/eller vatten.<br>
+				<strong>Mellanmål</strong><br>
+				Fredagsbuffé
+			</p>
+		</li>
 	</ul>
-</div>
-
-<?php endif; ?>
-
+	</div>
 
 <?php
 // ----------------------------------------
