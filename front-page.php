@@ -105,7 +105,6 @@ function acf_loop()
 	</ul>
 	</div>
 
-
 <?php
 // ----------------------------------------
 // Close ACF loop
