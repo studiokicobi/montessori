@@ -50,49 +50,60 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-test
+	<div class="matsedel">
+	<h3>Matsedel v. 50</h3>
+	<ul>
+		<li class="dag">
+			<h4>MÅNDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Köttkorv och potatismos, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Yoggi och smörgås
+			</p>
+		</li>
 
-	<?php
-		$args = array( 'post_type' => 'matsedel', 'posts_per_page' => 1 );
-		$the_query = new WP_Query( $args );
-		?>
-		<?php if ( $the_query->have_posts() ) : ?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		<li class="dag">
+			<h4>TISDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Fransk pastagratäng med kyckling, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Blodkorv och potatisplättar
+			</p>
+		</li>
 
-		<h3><?php the_title(); ?></h3>
+		<li class="dag">
+			<h4>ONSDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Stekt fisk och kokt potatis, grönsaker<br>
+				<strong>Mellanmål</strong><br>
+				Mjölk o smörgås
+			</p>
+		</li>
 
-		<ul>
-			<?php if ( have_rows( 'm-t' ) ) : ?>
-				<?php while ( have_rows( 'm-t' ) ) : the_row(); ?>
+		<li class="dag">
+			<h4>TORSDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Broccolisoppa med nybakat ekobröd<br>
+				<strong>Mellanmål</strong><br>
+				Mjölk o smörgås
+			</p>
+		</li>
 
-					<li class="dag">
-						<h4><?php the_sub_field( 'veckodag' ); ?></h4>
-						<?php the_sub_field( 'lunch' ); ?>
-						<?php the_sub_field( 'mellanmal' ); ?>
-						<?php the_sub_field( 'mellanmal-annat' ); ?>
-					</li>
-
-				<?php endwhile; ?>
-			<?php else : ?>
-				<?php // no rows found ?>
-			<?php endif; ?>
-
-
-			<?php if ( have_rows( 'fredag' ) ) : ?>
-				<?php while ( have_rows( 'fredag' ) ) : the_row(); ?>
-					<li class="dag">
-						<h4>Fredag</h4>
-						<?php the_sub_field( 'lunch' ); ?>
-						<?php the_sub_field( 'mellanmal' ); ?>
-					</li>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</ul>
-
-		<?php wp_reset_postdata(); ?>
-		<?php else:  ?>
-			<?php // no rows found ?>
-		<?php endif; ?>
+		<li class="dag">
+			<h4>FREDAG</h4>
+			<p>
+				<strong>Lunch</strong><br>
+				Matsäck – till lunch serveras mjölk och/eller vatten.<br>
+				<strong>Mellanmål</strong><br>
+				Fredagsbuffé
+			</p>
+		</li>
+	</ul>
+	</div>
 
 
 <?php
