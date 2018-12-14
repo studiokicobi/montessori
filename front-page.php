@@ -50,7 +50,8 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-.
+test
+
 	<?php
 		$args = array( 'post_type' => 'matsedel', 'posts_per_page' => 1 );
 		$the_query = new WP_Query( $args );
