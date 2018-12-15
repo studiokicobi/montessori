@@ -617,12 +617,13 @@ function remove_menus()
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+
 /**
  * Redirect non-admins to the homepage after logging into the site.
  * https://tommcfarlin.com/redirect-non-admin/
  * @since 	1.0
  */
-function acme_login_redirect( $redirect_to, $request, $user  ) {
-	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url();
+function mont_login_redirect( $redirect_to, $request, $user  ) {
+	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url( '/intranat/', 'https' );
 }
-add_filter( 'login_redirect', 'acme_login_redirect', 10, 3 );
+add_filter( 'login_redirect', 'mont_login_redirect', 10, 3 );
