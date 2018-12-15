@@ -2914,6 +2914,7 @@ p.position {
 .recaptcha-text {
   font-size: 75%;
   color: #999;
+  margin-top: 2rem;
 }
 
 .recaptcha-text a :link,
