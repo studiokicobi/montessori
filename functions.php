@@ -616,3 +616,13 @@ function remove_menus()
     remove_menu_page( 'edit-comments.php' ); //Comments
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+/**
+ * Redirect non-admins to the homepage after logging into the site.
+ * https://tommcfarlin.com/redirect-non-admin/
+ * @since 	1.0
+ */
+function acme_login_redirect( $redirect_to, $request, $user  ) {
+	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url();
+}
+add_filter( 'login_redirect', 'acme_login_redirect', 10, 3 );
