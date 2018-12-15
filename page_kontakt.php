@@ -58,6 +58,11 @@ function acf_loop()
         echo do_shortcode('[contact-form-7 id="' . $contact_form_id . '" title="Kontakta oss"]');
     }
 
+    // Google recaptcha legal text
+    echo '<p class="recaptcha-text">This site is protected by reCAPTCHA and the Google
+    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+    <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>';
+
     // Close contact form
     echo '</div>';
 
