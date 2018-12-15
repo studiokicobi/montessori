@@ -28,7 +28,7 @@
 }
 
 .form-rubrik {
-  border-top: 2px solid #eee;
+  border-top: 2px solid $lighter-grey;
   margin-top: 3rem;
   padding-top: 3rem;
 }
@@ -39,4 +39,19 @@
 
 .grecaptcha-badge {
   display: none;
+}
+
+.recaptcha-text {
+  font-size: 75%;
+  color: $mid-light-grey;
+  a {
+    :link,
+    :visited {
+      color: $dark-grey;
+    }
+    :hover,
+    :active {
+      color: $blue;
+    }
+  }
 }
