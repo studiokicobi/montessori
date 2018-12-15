@@ -57,6 +57,13 @@ select::-ms-expand {
   border: 0 !important;
 }
 
+// temporarily remove email field from page
+.acf-field-email {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
 .acf-field .acf-label {
   vertical-align: top;
   margin: 0 0 5px;
