@@ -50,60 +50,69 @@ function acf_loop()
 	<div class="wave wave-0"></div>
 	<div class="wave-shadow wave-shadow-0"></div>
 
-	<div class="matsedel">
-	<h3>Matsedel v. 50</h3>
-	<ul>
-		<li class="dag">
-			<h4>MÅNDAG</h4>
-			<p>
-				<strong>Lunch</strong><br>
-				Köttkorv och potatismos, grönsaker<br>
-				<strong>Mellanmål</strong><br>
-				Yoggi och smörgås
-			</p>
-		</li>
 
-		<li class="dag">
-			<h4>TISDAG</h4>
-			<p>
-				<strong>Lunch</strong><br>
-				Fransk pastagratäng med kyckling, grönsaker<br>
-				<strong>Mellanmål</strong><br>
-				Blodkorv och potatisplättar
-			</p>
-		</li>
+	<?php
+	// Matsedel
 
-		<li class="dag">
-			<h4>ONSDAG</h4>
-			<p>
-				<strong>Lunch</strong><br>
-				Stekt fisk och kokt potatis, grönsaker<br>
-				<strong>Mellanmål</strong><br>
-				Mjölk o smörgås
-			</p>
-		</li>
+		// Query the latest entry from this custom post type.
+		$args = array( 'post_type' => 'matsedel', 'posts_per_page' => 1 );
+		$loop = new WP_Query( $args );
+		?>
 
-		<li class="dag">
-			<h4>TORSDAG</h4>
-			<p>
-				<strong>Lunch</strong><br>
-				Broccolisoppa med nybakat ekobröd<br>
-				<strong>Mellanmål</strong><br>
-				Mjölk o smörgås
-			</p>
-		</li>
+		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-		<li class="dag">
-			<h4>FREDAG</h4>
-			<p>
-				<strong>Lunch</strong><br>
-				Matsäck – till lunch serveras mjölk och/eller vatten.<br>
-				<strong>Mellanmål</strong><br>
-				Fredagsbuffé
-			</p>
-		</li>
-	</ul>
-	</div>
+		<div class="matsedel">
+
+		<h3><?php the_title(); ?></h3>
+
+		<ul>
+			<?php
+
+			// Get måndag - torsdag
+
+			if ( have_rows( 'm-t' ) ) : ?>
+				<?php while ( have_rows( 'm-t' ) ) : the_row(); ?>
+
+					<li class="dag">
+						<h4><?php the_sub_field( 'veckodag' ); ?></h4>
+						<p>
+							<strong>Lunch</strong><br />
+							<?php the_sub_field( 'lunch' ); ?><br />
+							<strong>Mellanmål</strong><br />
+							<?php the_sub_field( 'mellanmal' ); ?>
+							<?php the_sub_field( 'mellanmal-annat' ); ?>
+						</p>
+					</li>
+
+				<?php endwhile; ?>
+			<?php else : ?>
+				<?php // no rows found ?>
+			<?php endif; ?>
+
+
+			<?php
+
+			// Get fredag
+
+			if ( have_rows( 'fredag' ) ) : ?>
+				<?php while ( have_rows( 'fredag' ) ) : the_row(); ?>
+					<li class="dag">
+						<h4>Fredag</h4>
+						<p>
+							<strong>Lunch</strong><br />
+							<?php the_sub_field( 'lunch' ); ?><br />
+							<strong>Mellanmål</strong><br />
+							<?php the_sub_field( 'mellanmal' ); ?>
+						</p>
+					</li>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</ul>
+		</div>
+
+		<?php wp_reset_postdata(); ?>
+		<?php endwhile; ?>
+
 
 <?php
 // ----------------------------------------
