@@ -2911,6 +2911,21 @@ p.position {
   display: none;
 }
 
+.recaptcha-text {
+  font-size: 75%;
+  color: #999;
+}
+
+.recaptcha-text a :link,
+.recaptcha-text a :visited {
+  color: #333;
+}
+
+.recaptcha-text a :hover,
+.recaptcha-text a :active {
+  color: #07b4f3;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
