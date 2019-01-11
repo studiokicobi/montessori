@@ -610,7 +610,7 @@ function remove_menus()
     //remove_menu_page( 'plugins.php' ); //Plugins
     //remove_menu_page( 'users.php' ); //Users
     //remove_menu_page( 'tools.php' ); //Tools
-    //remove_menu_page( 'edit.php?post_type=portfolio' ); //Portfolio
+    remove_menu_page( 'edit.php?post_type=portfolio' ); //Portfolio
     //remove_menu_page( 'options-general.php' ); //Settings
     //remove_menu_page( 'edit.php' ); //Posts
     remove_menu_page( 'edit-comments.php' ); //Comments
