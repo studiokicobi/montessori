@@ -612,7 +612,7 @@ function remove_menus()
     //remove_menu_page( 'tools.php' ); //Tools
     //remove_menu_page( 'edit.php?post_type=portfolio' ); //Portfolio
     //remove_menu_page( 'options-general.php' ); //Settings
-    remove_menu_page( 'edit.php' ); //Posts
+    //remove_menu_page( 'edit.php' ); //Posts
     remove_menu_page( 'edit-comments.php' ); //Comments
 }
 add_action( 'admin_menu', 'remove_menus' );
@@ -621,9 +621,21 @@ add_action( 'admin_menu', 'remove_menus' );
 /**
  * Redirect non-admins to the homepage after logging into the site.
  * https://tommcfarlin.com/redirect-non-admin/
- * @since 	1.0
+ * @since 1.0
  */
 function mont_login_redirect( $redirect_to, $request, $user  ) {
 	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url( '/intranat/', 'https' );
 }
 add_filter( 'login_redirect', 'mont_login_redirect', 10, 3 );
+
+/**
+ * Make Nyhetsbrev category members only and redirect non-members to login page.
+ *
+ */
+add_action( 'wp', 'check_redirect_page' );
+function check_redirect_page() {
+    if ( !is_user_logged_in() && is_category( 28 ) ) { // Cat 28 = Nyhetsbrev
+        wp_redirect( home_url( '/#login' ) );
+        exit();
+    }
+}
