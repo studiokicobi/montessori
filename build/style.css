@@ -2029,6 +2029,45 @@ ul.intranet li a:hover {
   font-size: 1.8rem;
 }
 
+/* Edit the Team Booking UI */
+/* hide the clock icon we don't need */
+.tbk-schedule-filter-icons {
+  display: none;
+}
+
+.tbk-schedule-slot:not(.tbk-read-only):hover,
+.tbk-schedule-slot:not(.tbk-read-only):focus,
+.tbk-upcoming-slot:not(.tbk-read-only):hover,
+.tbk-upcoming-slot:not(.tbk-read-only):focus,
+.tbk-schedule-slot.tb-book-advice:hover,
+.tbk-schedule-slot.tb-book-advice:focus,
+.tbk-upcoming-slot.tb-book-advice:hover,
+.tbk-upcoming-slot.tb-book-advice:focus {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* Button styles */
+.tbk-slot-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-width: 0;
+  min-height: 3.5rem;
+}
+
+.tbk-slot-button:hover, .tbk-slot-button:active, .tbk-slot-button:focus {
+  background-color: transparent;
+}
+
+/* hide another cloock icon we don't need */
+.tbk-cell .wait {
+  display: none;
+}
+
+/* the label for the avdelning: Musslan eller Snäckan */
+.tbk-divider {
+  font-weight: 400;
+}
+
 /* ==========================================================================
    Widgets
    ========================================================================== */
