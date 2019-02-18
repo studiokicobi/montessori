@@ -140,7 +140,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b,
@@ -585,9 +585,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  background-color: #07b4f3;
   border: 0;
   color: #fff;
+  background-color: #07b4f3;
   width: auto;
   padding: 15px 30px;
   font-size: 13px;
@@ -602,8 +602,7 @@ input[type="submit"],
   font-weight: 700 !important;
 }
 
-button:focus,
-button:hover,
+button:focus, button:hover,
 input[type="button"]:focus,
 input[type="button"]:hover,
 input[type="reset"]:focus,
@@ -641,8 +640,7 @@ input[type="button"] {
   cursor: pointer;
 }
 
-input[type="button"]:focus,
-input[type="button"]:hover {
+input[type="button"]:focus, input[type="button"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -664,8 +662,7 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-input[type="reset"]:focus,
-input[type="reset"]:hover {
+input[type="reset"]:focus, input[type="reset"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -687,8 +684,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:focus,
-input[type="submit"]:hover {
+input[type="submit"]:focus, input[type="submit"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -711,8 +707,7 @@ input[type="submit"].small {
   cursor: pointer;
 }
 
-.button:focus,
-.button:hover {
+.button:focus, .button:hover {
   color: #fff;
   background-color: #333;
 }
@@ -852,12 +847,7 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbold";
   src: url("fonts/klinicslabbold-webfont.eot");
-  src: url("fonts/klinicslabbold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/klinicslabbold-webfont.woff2") format("woff2"),
-    url("fonts/klinicslabbold-webfont.woff") format("woff"),
-    url("fonts/klinicslabbold-webfont.ttf") format("truetype"),
-    url("fonts/klinicslabbold-webfont.svg#klinic_slabbold") format("svg");
+  src: url("fonts/klinicslabbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbold-webfont.woff2") format("woff2"), url("fonts/klinicslabbold-webfont.woff") format("woff"), url("fonts/klinicslabbold-webfont.ttf") format("truetype"), url("fonts/klinicslabbold-webfont.svg#klinic_slabbold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -866,12 +856,7 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbook";
   src: url("fonts/klinicslabbook-webfont.eot");
-  src: url("fonts/klinicslabbook-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/klinicslabbook-webfont.woff2") format("woff2"),
-    url("fonts/klinicslabbook-webfont.woff") format("woff"),
-    url("fonts/klinicslabbook-webfont.ttf") format("truetype"),
-    url("fonts/klinicslabbook-webfont.svg#klinic_slabbook") format("svg");
+  src: url("fonts/klinicslabbook-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbook-webfont.woff2") format("woff2"), url("fonts/klinicslabbook-webfont.woff") format("woff"), url("fonts/klinicslabbook-webfont.ttf") format("truetype"), url("fonts/klinicslabbook-webfont.svg#klinic_slabbook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -880,13 +865,7 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbook_italic";
   src: url("fonts/klinicslabbookit-webfont.eot");
-  src: url("fonts/klinicslabbookit-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/klinicslabbookit-webfont.woff2") format("woff2"),
-    url("fonts/klinicslabbookit-webfont.woff") format("woff"),
-    url("fonts/klinicslabbookit-webfont.ttf") format("truetype"),
-    url("fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic")
-      format("svg");
+  src: url("fonts/klinicslabbookit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbookit-webfont.woff2") format("woff2"), url("fonts/klinicslabbookit-webfont.woff") format("woff"), url("fonts/klinicslabbookit-webfont.ttf") format("truetype"), url("fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -895,12 +874,7 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabmedium";
   src: url("fonts/klinicslabmedium-webfont.eot");
-  src: url("fonts/klinicslabmedium-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/klinicslabmedium-webfont.woff2") format("woff2"),
-    url("fonts/klinicslabmedium-webfont.woff") format("woff"),
-    url("fonts/klinicslabmedium-webfont.ttf") format("truetype"),
-    url("fonts/klinicslabmedium-webfont.svg#klinic_slabmedium") format("svg");
+  src: url("fonts/klinicslabmedium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmedium-webfont.woff2") format("woff2"), url("fonts/klinicslabmedium-webfont.woff") format("woff"), url("fonts/klinicslabmedium-webfont.ttf") format("truetype"), url("fonts/klinicslabmedium-webfont.svg#klinic_slabmedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -909,13 +883,7 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabmedium_italic";
   src: url("fonts/klinicslabmediumit-webfont.eot");
-  src: url("fonts/klinicslabmediumit-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/klinicslabmediumit-webfont.woff2") format("woff2"),
-    url("fonts/klinicslabmediumit-webfont.woff") format("woff"),
-    url("fonts/klinicslabmediumit-webfont.ttf") format("truetype"),
-    url("fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic")
-      format("svg");
+  src: url("fonts/klinicslabmediumit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmediumit-webfont.woff2") format("woff2"), url("fonts/klinicslabmediumit-webfont.woff") format("woff"), url("fonts/klinicslabmediumit-webfont.ttf") format("truetype"), url("fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1685,8 +1653,7 @@ body.home .entry-content {
   }
 }
 
-.menu-toggle:focus,
-.menu-toggle:hover {
+.menu-toggle:focus, .menu-toggle:hover {
   border-width: 0;
   color: #07b4f3;
   background-color: transparent;
@@ -1727,8 +1694,7 @@ body.home .entry-content {
   }
 }
 
-.sub-menu-toggle:focus,
-.sub-menu-toggle:hover {
+.sub-menu-toggle:focus, .sub-menu-toggle:hover {
   border-width: 0;
   color: #07b4f3;
   background-color: transparent;
@@ -2063,10 +2029,14 @@ ul.intranet li a:hover {
   font-size: 1.8rem;
 }
 
-/* Edit the Team Booking UI */
+/* Team Booking customization */
+div.calendar_main_container {
+  margin: 4rem 0 !important;
+}
+
 /* hide the clock icon we don't need */
 .tbk-schedule-filter-icons {
-  display: none;
+  display: none !important;
 }
 
 .tbk-schedule-slot:not(.tbk-read-only):hover,
@@ -2077,31 +2047,105 @@ ul.intranet li a:hover {
 .tbk-schedule-slot.tb-book-advice:focus,
 .tbk-upcoming-slot.tb-book-advice:hover,
 .tbk-upcoming-slot.tb-book-advice:focus {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
 }
 
 /* Button styles */
 .tbk-slot-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-width: 0;
-  min-height: 3.5rem;
+  min-height: 3.5rem !important;
+  border-radius: 0 !important;
 }
 
-.tbk-slot-button:hover,
-.tbk-slot-button:active,
-.tbk-slot-button:focus {
-  background-color: transparent;
+.tbk-slot-button .tbk-bgnd {
+  margin: -11px -12px !important;
 }
 
-/* hide another cloock icon we don't need */
+.tbk-button:not(.tbk-file-button) {
+  color: #000 !important;
+}
+
+.tbk-button:not(.tbk-file-button):hover, .tbk-button:not(.tbk-file-button):active, .tbk-button:not(.tbk-file-button):focus {
+  color: #000 !important;
+}
+
+/* hide another clock icon we don't need */
 .tbk-cell .wait {
-  display: none;
+  display: none !important;
 }
 
 /* the label for the avdelning: Musslan eller Snäckan */
 .tbk-divider {
-  font-weight: 400;
+  font-weight: 400 !important;
+}
+
+/* Adjust the booking buttons */
+.tbk-add {
+  margin-right: 0.5rem !important;
+  width: calc(49% - 0.5rem) !important;
+  float: left !important;
+}
+
+.tbk-book {
+  margin-left: 0.5rem !important;
+  float: right !important;
+  width: calc(49% - 0.5rem) !important;
+}
+
+.tbk-slot-label {
+  margin: 1rem 0 !important;
+}
+
+.tbk-meta {
+  display: none !important;
+}
+
+/* Booking form */
+.tbk-reservation-form-footer {
+  border-width: 0 !important;
+}
+
+.tbk-reservation-form-footer .tbk-tickets-price-section .tbk-tickets-span,
+.tbk-reservation-form-footer .tbk-tickets-price-section .tbk-ticket-value-cell {
+  display: none !important;
+}
+
+.tb-frontend-calendar .tbk-fields {
+  margin-top: 5rem !important;
+}
+
+.tbk-field-text label {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 1.4rem !important;
+  font-family: "Lato", sans-serif !important !important;
+  margin: 0 0 6px 18px !important;
+}
+
+.tbk-field-text label:after {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.tbk-reservation-form-footer {
+  margin: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* remove tickets row from final booking screen */
+.tbk-reservation-review-content table tbody tr:nth-of-type(4) {
+  display: none;
+}
+
+/* Multi-day booking form */
+.tbk-slide .tbk-summary-table .tbk-summary-slot-details {
+  display: none;
+}
+
+.tbk-summary-slot-header {
+  text-align: center;
+}
+
+.tbk-cart-summary-service-header span.tbk-edit-form {
+  display: none;
 }
 
 /* ==========================================================================
@@ -2190,13 +2234,11 @@ ul.subpage_nav > li {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  transition: opacity 0.1s linear, visibility 0.1s linear,
-    -webkit-transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s;
   transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s;
-  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s,
-    -webkit-transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s, -webkit-transform 0.1s;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   pointer-events: none;
 }
 
@@ -2250,7 +2292,7 @@ ul.subpage_nav > li {
 .tooltip:focus:before,
 .tooltip:focus:after {
   -webkit-transform: translateX(-10px);
-  transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 .tooltip:before {
@@ -2312,8 +2354,7 @@ ul.subpage_nav > li {
   background: transparent;
 }
 
-.gs-faq__question:focus,
-.gs-faq__question:hover {
+.gs-faq__question:focus, .gs-faq__question:hover {
   color: #07b4f3;
   background: transparent;
 }
@@ -2480,19 +2521,11 @@ a.cta:hover {
 }
 
 .wave-0::before {
-  background-image: radial-gradient(
-    circle at 10px -15px,
-    rgba(180, 230, 250, 0) 20px,
-    #b4e6fa 21px
-  );
+  background-image: radial-gradient(circle at 10px -15px, rgba(180, 230, 250, 0) 20px, #b4e6fa 21px);
 }
 
 .wave-0::after {
-  background-image: radial-gradient(
-    circle at 10px 26px,
-    #b4e6fa 20px,
-    rgba(180, 230, 250, 0) 21px
-  );
+  background-image: radial-gradient(circle at 10px 26px, #b4e6fa 20px, rgba(180, 230, 250, 0) 21px);
 }
 
 .wave-shadow-0 {
@@ -2500,19 +2533,11 @@ a.cta:hover {
 }
 
 .wave-1::before {
-  background-image: radial-gradient(
-    circle at 10px -15px,
-    rgba(11, 137, 185, 0) 20px,
-    #0b89b9 21px
-  );
+  background-image: radial-gradient(circle at 10px -15px, rgba(11, 137, 185, 0) 20px, #0b89b9 21px);
 }
 
 .wave-1::after {
-  background-image: radial-gradient(
-    circle at 10px 26px,
-    #0b89b9 20px,
-    rgba(11, 137, 185, 0) 21px
-  );
+  background-image: radial-gradient(circle at 10px 26px, #0b89b9 20px, rgba(11, 137, 185, 0) 21px);
 }
 
 .wave-shadow-1 {
@@ -2520,19 +2545,11 @@ a.cta:hover {
 }
 
 .wave-2::before {
-  background-image: radial-gradient(
-    circle at 10px -15px,
-    rgba(60, 178, 220, 0) 20px,
-    #3cb2dc 21px
-  );
+  background-image: radial-gradient(circle at 10px -15px, rgba(60, 178, 220, 0) 20px, #3cb2dc 21px);
 }
 
 .wave-2::after {
-  background-image: radial-gradient(
-    circle at 10px 26px,
-    #3cb2dc 20px,
-    rgba(60, 178, 220, 0) 21px
-  );
+  background-image: radial-gradient(circle at 10px 26px, #3cb2dc 20px, rgba(60, 178, 220, 0) 21px);
 }
 
 .wave-shadow-2 {
@@ -2540,19 +2557,11 @@ a.cta:hover {
 }
 
 .wave-footer::before {
-  background-image: radial-gradient(
-    circle at 10px -15px,
-    rgba(5, 73, 117, 0) 20px,
-    #054975 21px
-  );
+  background-image: radial-gradient(circle at 10px -15px, rgba(5, 73, 117, 0) 20px, #054975 21px);
 }
 
 .wave-footer::after {
-  background-image: radial-gradient(
-    circle at 10px 26px,
-    #054975 20px,
-    rgba(5, 73, 117, 0) 21px
-  );
+  background-image: radial-gradient(circle at 10px 26px, #054975 20px, rgba(5, 73, 117, 0) 21px);
 }
 
 .wave-shadow-footer {
@@ -2669,8 +2678,8 @@ select {
   border-radius: 0;
   border: 1px solid #ddd;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   color: #000;
   background: url("images/noun_down_1920917.png") 97%/5% no-repeat #fff;
 }
@@ -2802,8 +2811,7 @@ table.medlemmar-table td {
   padding-left: 1rem;
 }
 
-.members__row--item-parents,
-.members__row--item-links {
+.members__row--item-parents, .members__row--item-links {
   margin-bottom: 1.5rem 0;
   padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
@@ -2818,19 +2826,16 @@ table.medlemmar-table td {
   margin-right: 10px;
 }
 
-.members__row--item-email-link,
-.members__row--item-tel-link {
+.members__row--item-email-link, .members__row--item-tel-link {
   font-size: 0;
   color: #333;
 }
 
-.members__row--item-email-link:hover,
-.members__row--item-tel-link:hover {
+.members__row--item-email-link:hover, .members__row--item-tel-link:hover {
   color: #07b4f3;
 }
 
-.members__row--item-email-link::before,
-.members__row--item-tel-link::before {
+.members__row--item-email-link::before, .members__row--item-tel-link::before {
   visibility: visible;
   padding-top: 4px;
 }
@@ -2935,8 +2940,7 @@ p.position {
   font-weight: 700 !important;
 }
 
-.booking_form input[type="button"]:focus,
-.booking_form input[type="button"]:hover,
+.booking_form input[type="button"]:focus, .booking_form input[type="button"]:hover,
 .booking_form input[type="submit"]:focus,
 .booking_form input[type="submit"]:hover {
   color: #fff;
@@ -3076,8 +3080,7 @@ p.position {
     text-align: left;
     letter-spacing: 0;
   }
-  li.login:hover,
-  li.logout:hover {
+  li.login:hover, li.logout:hover {
     background: transparent;
     border: 0;
   }
