@@ -6,17 +6,6 @@
 
 
 /**
- * Force clear CSS Cache while developing theme:
- *
- */
-
-// add_filter( 'stylesheet_uri', 'child_stylesheet_uri' );
-// function child_stylesheet_uri( $stylesheet_uri ) {
-// return add_query_arg( 'v', filemtime( get_stylesheet_directory() . '/style.css' ), $stylesheet_uri );
-// }
-
-
-/**
  * Genesis defaults:
  *
  */
