@@ -140,7 +140,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 b,
@@ -317,6 +317,8 @@ html {
   /* 10px browser default */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  font-display: auto;
+  /* Controlling Font Performance with font-display: https://developers.google.com/web/updates/2016/02/font-display */
 }
 
 /* Chrome fix */
@@ -331,6 +333,7 @@ body {
   font-family: "klinic_slabbook", serif;
   font-size: 18px;
   font-weight: normal;
+  font-display: auto;
   line-height: 1.625;
 }
 
@@ -384,6 +387,7 @@ b,
 strong {
   font-weight: normal;
   font-family: "klinic_slabmedium", serif;
+  font-display: auto;
 }
 
 blockquote,
@@ -424,6 +428,7 @@ h6 {
   margin: 0 0 10px;
   font-family: "klinic_slabmedium", serif;
   font-weight: normal;
+  font-display: auto;
   line-height: 1.2;
 }
 
@@ -597,12 +602,14 @@ input[type="submit"],
   cursor: pointer;
   border-radius: 100px;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
 }
 
-button:focus, button:hover,
+button:focus,
+button:hover,
 input[type="button"]:focus,
 input[type="button"]:hover,
 input[type="reset"]:focus,
@@ -640,7 +647,8 @@ input[type="button"] {
   cursor: pointer;
 }
 
-input[type="button"]:focus, input[type="button"]:hover {
+input[type="button"]:focus,
+input[type="button"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -662,7 +670,8 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-input[type="reset"]:focus, input[type="reset"]:hover {
+input[type="reset"]:focus,
+input[type="reset"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -684,7 +693,8 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:focus, input[type="submit"]:hover {
+input[type="submit"]:focus,
+input[type="submit"]:hover {
   color: #fff;
   background-color: #333;
 }
@@ -707,7 +717,8 @@ input[type="submit"].small {
   cursor: pointer;
 }
 
-.button:focus, .button:hover {
+.button:focus,
+.button:hover {
   color: #fff;
   background-color: #333;
 }
@@ -847,7 +858,12 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbold";
   src: url("fonts/klinicslabbold-webfont.eot");
-  src: url("fonts/klinicslabbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbold-webfont.woff2") format("woff2"), url("fonts/klinicslabbold-webfont.woff") format("woff"), url("fonts/klinicslabbold-webfont.ttf") format("truetype"), url("fonts/klinicslabbold-webfont.svg#klinic_slabbold") format("svg");
+  src: url("fonts/klinicslabbold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/klinicslabbold-webfont.woff2") format("woff2"),
+    url("fonts/klinicslabbold-webfont.woff") format("woff"),
+    url("fonts/klinicslabbold-webfont.ttf") format("truetype"),
+    url("fonts/klinicslabbold-webfont.svg#klinic_slabbold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -856,7 +872,12 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbook";
   src: url("fonts/klinicslabbook-webfont.eot");
-  src: url("fonts/klinicslabbook-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbook-webfont.woff2") format("woff2"), url("fonts/klinicslabbook-webfont.woff") format("woff"), url("fonts/klinicslabbook-webfont.ttf") format("truetype"), url("fonts/klinicslabbook-webfont.svg#klinic_slabbook") format("svg");
+  src: url("fonts/klinicslabbook-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/klinicslabbook-webfont.woff2") format("woff2"),
+    url("fonts/klinicslabbook-webfont.woff") format("woff"),
+    url("fonts/klinicslabbook-webfont.ttf") format("truetype"),
+    url("fonts/klinicslabbook-webfont.svg#klinic_slabbook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -865,7 +886,13 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabbook_italic";
   src: url("fonts/klinicslabbookit-webfont.eot");
-  src: url("fonts/klinicslabbookit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabbookit-webfont.woff2") format("woff2"), url("fonts/klinicslabbookit-webfont.woff") format("woff"), url("fonts/klinicslabbookit-webfont.ttf") format("truetype"), url("fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic") format("svg");
+  src: url("fonts/klinicslabbookit-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/klinicslabbookit-webfont.woff2") format("woff2"),
+    url("fonts/klinicslabbookit-webfont.woff") format("woff"),
+    url("fonts/klinicslabbookit-webfont.ttf") format("truetype"),
+    url("fonts/klinicslabbookit-webfont.svg#klinic_slabbook_italic")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -874,7 +901,12 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabmedium";
   src: url("fonts/klinicslabmedium-webfont.eot");
-  src: url("fonts/klinicslabmedium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmedium-webfont.woff2") format("woff2"), url("fonts/klinicslabmedium-webfont.woff") format("woff"), url("fonts/klinicslabmedium-webfont.ttf") format("truetype"), url("fonts/klinicslabmedium-webfont.svg#klinic_slabmedium") format("svg");
+  src: url("fonts/klinicslabmedium-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/klinicslabmedium-webfont.woff2") format("woff2"),
+    url("fonts/klinicslabmedium-webfont.woff") format("woff"),
+    url("fonts/klinicslabmedium-webfont.ttf") format("truetype"),
+    url("fonts/klinicslabmedium-webfont.svg#klinic_slabmedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -883,7 +915,13 @@ th:first-child {
   font-display: auto;
   font-family: "klinic_slabmedium_italic";
   src: url("fonts/klinicslabmediumit-webfont.eot");
-  src: url("fonts/klinicslabmediumit-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/klinicslabmediumit-webfont.woff2") format("woff2"), url("fonts/klinicslabmediumit-webfont.woff") format("woff"), url("fonts/klinicslabmediumit-webfont.ttf") format("truetype"), url("fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic") format("svg");
+  src: url("fonts/klinicslabmediumit-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/klinicslabmediumit-webfont.woff2") format("woff2"),
+    url("fonts/klinicslabmediumit-webfont.woff") format("woff"),
+    url("fonts/klinicslabmediumit-webfont.ttf") format("truetype"),
+    url("fonts/klinicslabmediumit-webfont.svg#klinic_slabmedium_italic")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1142,6 +1180,7 @@ th:first-child {
   font-size: 13px;
   margin-bottom: 5px;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   font-weight: normal;
   color: #474e5d;
 }
@@ -1653,7 +1692,8 @@ body.home .entry-content {
   }
 }
 
-.menu-toggle:focus, .menu-toggle:hover {
+.menu-toggle:focus,
+.menu-toggle:hover {
   border-width: 0;
   color: #07b4f3;
   background-color: transparent;
@@ -1694,7 +1734,8 @@ body.home .entry-content {
   }
 }
 
-.sub-menu-toggle:focus, .sub-menu-toggle:hover {
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
   border-width: 0;
   color: #07b4f3;
   background-color: transparent;
@@ -1764,6 +1805,7 @@ body.home .entry-content {
    =================================== */
 .menu-primary a {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1776,6 +1818,7 @@ li.login a,
 li.logout a {
   color: #07b4f3;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -1797,6 +1840,7 @@ li.logout a:hover {
 
 .login-submit input {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1836,6 +1880,7 @@ ul.intranet li {
 ul.intranet li a {
   color: #fff;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.05rem !important;
   font-weight: 700 !important;
@@ -1994,6 +2039,7 @@ ul.intranet li a:hover {
   font-size: 12px;
   line-height: 1.5;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2048,7 +2094,7 @@ div.calendar_main_container {
 .tbk-upcoming-slot.tb-book-advice:hover,
 .tbk-upcoming-slot.tb-book-advice:focus {
   -webkit-transform: translateY(0) !important;
-          transform: translateY(0) !important;
+  transform: translateY(0) !important;
 }
 
 /* Button styles */
@@ -2065,7 +2111,9 @@ div.calendar_main_container {
   color: #000 !important;
 }
 
-.tbk-button:not(.tbk-file-button):hover, .tbk-button:not(.tbk-file-button):active, .tbk-button:not(.tbk-file-button):focus {
+.tbk-button:not(.tbk-file-button):hover,
+.tbk-button:not(.tbk-file-button):active,
+.tbk-button:not(.tbk-file-button):focus {
   color: #000 !important;
 }
 
@@ -2118,6 +2166,7 @@ div.calendar_main_container {
   color: rgba(255, 255, 255, 0.5) !important;
   font-size: 1.4rem !important;
   font-family: "Lato", sans-serif !important !important;
+  font-display: auto;
   margin: 0 0 6px 18px !important;
 }
 
@@ -2225,6 +2274,7 @@ ul.subpage_nav > li {
   cursor: pointer;
   text-align: center;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
 }
 
 [data-tooltip]:before,
@@ -2234,11 +2284,13 @@ ul.subpage_nav > li {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear,
+    -webkit-transform 0.1s;
   transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s;
-  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s, -webkit-transform 0.1s;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s,
+    -webkit-transform 0.1s;
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   pointer-events: none;
 }
 
@@ -2292,7 +2344,7 @@ ul.subpage_nav > li {
 .tooltip:focus:before,
 .tooltip:focus:after {
   -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 
 .tooltip:before {
@@ -2354,7 +2406,8 @@ ul.subpage_nav > li {
   background: transparent;
 }
 
-.gs-faq__question:focus, .gs-faq__question:hover {
+.gs-faq__question:focus,
+.gs-faq__question:hover {
   color: #07b4f3;
   background: transparent;
 }
@@ -2362,6 +2415,7 @@ ul.subpage_nav > li {
 .gs-faq__question:after {
   float: right;
   font-family: dashicons;
+  font-display: auto;
   content: "\f132";
 }
 
@@ -2396,6 +2450,7 @@ body.home .content p {
   font-size: 30px;
   font-size: 3rem;
   font-family: "klinic_slabbold", serif;
+  font-display: auto;
   line-height: 1.2;
   text-align: center;
   max-width: 680px;
@@ -2436,6 +2491,7 @@ body.home .content p {
   font-size: 18px;
   font-size: 1.8rem;
   font-family: "klinic_slabmedium", serif;
+  font-display: auto;
   line-height: 1.3;
   text-align: center;
   margin: 0 auto;
@@ -2452,6 +2508,7 @@ body.home .content p {
   font-size: 16px;
   font-size: 1.6rem;
   font-family: "klinic_slabmedium_italic", serif;
+  font-display: auto;
   padding-bottom: 15px;
   text-align: center;
   margin: 0 auto;
@@ -2472,6 +2529,7 @@ a.cta {
   border-radius: 50px;
   margin: 10px auto 80px;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2521,11 +2579,19 @@ a.cta:hover {
 }
 
 .wave-0::before {
-  background-image: radial-gradient(circle at 10px -15px, rgba(180, 230, 250, 0) 20px, #b4e6fa 21px);
+  background-image: radial-gradient(
+    circle at 10px -15px,
+    rgba(180, 230, 250, 0) 20px,
+    #b4e6fa 21px
+  );
 }
 
 .wave-0::after {
-  background-image: radial-gradient(circle at 10px 26px, #b4e6fa 20px, rgba(180, 230, 250, 0) 21px);
+  background-image: radial-gradient(
+    circle at 10px 26px,
+    #b4e6fa 20px,
+    rgba(180, 230, 250, 0) 21px
+  );
 }
 
 .wave-shadow-0 {
@@ -2533,11 +2599,19 @@ a.cta:hover {
 }
 
 .wave-1::before {
-  background-image: radial-gradient(circle at 10px -15px, rgba(11, 137, 185, 0) 20px, #0b89b9 21px);
+  background-image: radial-gradient(
+    circle at 10px -15px,
+    rgba(11, 137, 185, 0) 20px,
+    #0b89b9 21px
+  );
 }
 
 .wave-1::after {
-  background-image: radial-gradient(circle at 10px 26px, #0b89b9 20px, rgba(11, 137, 185, 0) 21px);
+  background-image: radial-gradient(
+    circle at 10px 26px,
+    #0b89b9 20px,
+    rgba(11, 137, 185, 0) 21px
+  );
 }
 
 .wave-shadow-1 {
@@ -2545,11 +2619,19 @@ a.cta:hover {
 }
 
 .wave-2::before {
-  background-image: radial-gradient(circle at 10px -15px, rgba(60, 178, 220, 0) 20px, #3cb2dc 21px);
+  background-image: radial-gradient(
+    circle at 10px -15px,
+    rgba(60, 178, 220, 0) 20px,
+    #3cb2dc 21px
+  );
 }
 
 .wave-2::after {
-  background-image: radial-gradient(circle at 10px 26px, #3cb2dc 20px, rgba(60, 178, 220, 0) 21px);
+  background-image: radial-gradient(
+    circle at 10px 26px,
+    #3cb2dc 20px,
+    rgba(60, 178, 220, 0) 21px
+  );
 }
 
 .wave-shadow-2 {
@@ -2557,11 +2639,19 @@ a.cta:hover {
 }
 
 .wave-footer::before {
-  background-image: radial-gradient(circle at 10px -15px, rgba(5, 73, 117, 0) 20px, #054975 21px);
+  background-image: radial-gradient(
+    circle at 10px -15px,
+    rgba(5, 73, 117, 0) 20px,
+    #054975 21px
+  );
 }
 
 .wave-footer::after {
-  background-image: radial-gradient(circle at 10px 26px, #054975 20px, rgba(5, 73, 117, 0) 21px);
+  background-image: radial-gradient(
+    circle at 10px 26px,
+    #054975 20px,
+    rgba(5, 73, 117, 0) 21px
+  );
 }
 
 .wave-shadow-footer {
@@ -2599,6 +2689,7 @@ a.cta:hover {
 
 .matsedel h4 {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2635,6 +2726,7 @@ a.cta:hover {
 
 .matsedel ul li strong {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2662,6 +2754,7 @@ body.home article {
    =================================== */
 label {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2678,8 +2771,8 @@ select {
   border-radius: 0;
   border: 1px solid #ddd;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #000;
   background: url("images/noun_down_1920917.png") 97%/5% no-repeat #fff;
 }
@@ -2754,6 +2847,7 @@ div.table-wrapper {
 
 table.medlemmar-table th {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -2780,6 +2874,7 @@ table.medlemmar-table td {
   text-align: left;
   border-bottom: 1px solid #ddd;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: normal;
@@ -2800,6 +2895,7 @@ table.medlemmar-table td {
 
 .members__row--item-children {
   font-family: "klinic_slabmedium", serif;
+  font-display: auto;
   border: 0;
 }
 
@@ -2811,11 +2907,13 @@ table.medlemmar-table td {
   padding-left: 1rem;
 }
 
-.members__row--item-parents, .members__row--item-links {
+.members__row--item-parents,
+.members__row--item-links {
   margin-bottom: 1.5rem 0;
   padding-bottom: 1.5rem 0;
   border-bottom: 1px solid #ddd;
   font-family: "klinic_slabbook", serif;
+  font-display: auto;
 }
 
 .members__row--item-links {
@@ -2826,16 +2924,19 @@ table.medlemmar-table td {
   margin-right: 10px;
 }
 
-.members__row--item-email-link, .members__row--item-tel-link {
+.members__row--item-email-link,
+.members__row--item-tel-link {
   font-size: 0;
   color: #333;
 }
 
-.members__row--item-email-link:hover, .members__row--item-tel-link:hover {
+.members__row--item-email-link:hover,
+.members__row--item-tel-link:hover {
   color: #07b4f3;
 }
 
-.members__row--item-email-link::before, .members__row--item-tel-link::before {
+.members__row--item-email-link::before,
+.members__row--item-tel-link::before {
   visibility: visible;
   padding-top: 4px;
 }
@@ -2902,6 +3003,7 @@ p.position {
 .wpdevbk form,
 .wpdevbk p {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
 }
 
 .booking_form_div p {
@@ -2912,6 +3014,7 @@ p.position {
 .booking_form_div input[type="text"],
 .booking_form_div textarea {
   font-family: "klinic_slabbook", serif;
+  font-display: auto;
 }
 
 .datepick-inline {
@@ -2935,12 +3038,14 @@ p.position {
   cursor: pointer;
   border-radius: 100px;
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
 }
 
-.booking_form input[type="button"]:focus, .booking_form input[type="button"]:hover,
+.booking_form input[type="button"]:focus,
+.booking_form input[type="button"]:hover,
 .booking_form input[type="submit"]:focus,
 .booking_form input[type="submit"]:hover {
   color: #fff;
@@ -2983,6 +3088,7 @@ p.position {
 
 .datepick-inline .date_available a {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-shadow: 0 !important;
 }
 
@@ -2995,6 +3101,7 @@ p.position {
    ========================================================================== */
 .wpcf7-submit {
   font-family: "Lato", sans-serif !important;
+  font-display: auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem !important;
   font-weight: 700 !important;
@@ -3080,7 +3187,8 @@ p.position {
     text-align: left;
     letter-spacing: 0;
   }
-  li.login:hover, li.logout:hover {
+  li.login:hover,
+  li.logout:hover {
     background: transparent;
     border: 0;
   }
@@ -3316,6 +3424,7 @@ p.position {
   }
   .content a {
     font-family: "klinic_slabbold", serif;
+    font-display: auto;
   }
   .sidebar-content .content {
     float: right;
@@ -3342,12 +3451,14 @@ p.position {
     font-size: 190px;
     font-size: 19rem;
     font-family: "Lato", sans-serif !important;
+    font-display: auto;
     font-weight: normal;
   }
   body.error404 .content h2 {
     font-size: 46px;
     font-size: 4.6rem;
     font-family: "klinic_slabmedium", serif;
+    font-display: auto;
   }
   body.error404 #pre-footer {
     display: none;
@@ -3533,6 +3644,7 @@ p.position {
     position: relative;
     z-index: 1001;
     font-family: "Lato", sans-serif !important;
+    font-display: auto;
     text-transform: uppercase;
     letter-spacing: 0.1rem !important;
     font-weight: 700 !important;
